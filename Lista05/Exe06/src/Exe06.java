@@ -5,7 +5,7 @@ public class Exe06 {
     public Exe06() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Informe um valor inteiro: ");
+        System.out.print("Informe um valor inteiro:  ");
         int n = scanner.nextInt();
 
         double vetor[] = new double[n];
