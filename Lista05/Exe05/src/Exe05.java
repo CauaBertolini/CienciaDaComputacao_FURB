@@ -52,7 +52,7 @@ public class Exe05 {
             }
         }
 
-        if (afinidade >= 15) {
+        if (afinidade == 15) {
             System.out.println("Casem!");
         } else if (afinidade >= 10 && afinidade <= 14) {
             System.out.println("Vocês tem muito em comum.");
