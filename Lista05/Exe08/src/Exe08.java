@@ -17,6 +17,8 @@ public class Exe08 {
         popularVetor(vetor, scanner);
 
         imprimirTabelaVetor(vetor, n);
+
+        scanner.close();
     }
     
     public static void main(String[] args) throws Exception {
