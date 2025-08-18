@@ -32,11 +32,10 @@ public class ItemCompra {
     }
 
     public void setProduto(Produto produto) {
-        if (produto == null) {
-            System.out.println("Produto não pode ser nullo.");
-        } else {
-            this.produto = produto;
-        }
+        if (produto == null)
+            throw new IllegalArgumentException("Produto não pode ser nullo.");
+
+        this.produto = produto;
     }
 
     public float getQntCompra() {
@@ -44,11 +43,11 @@ public class ItemCompra {
     }
 
     public void setQntCompra(int qntCompra) {
-        if (qntCompra == 0) {
-            System.out.println("Quantidade de compra não pode ser zero.");
-        } else {
-            this.quantidadeCompra = qntCompra;
-        }
+        if (qntCompra == 0)
+            throw new IllegalArgumentException("Quantidade de compra não pode ser zero.");
+
+        this.quantidadeCompra = qntCompra;
+
     }
 
     public float getQuantidadeMes() {
