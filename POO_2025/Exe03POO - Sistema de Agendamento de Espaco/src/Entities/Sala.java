@@ -1,12 +1,12 @@
 package Entities;
 
-public class Cargo {
+public class Sala {
     private String nome;
     private int codigo;
+    private int qntLugares;
 
-    public Cargo(String nome, int codigo) {
-        this.nome = nome;
-        this.codigo = codigo;
+    public Sala(String nome, int qntLugares) {
+
     }
 
     public String getNome() {
@@ -25,5 +25,12 @@ public class Cargo {
         this.codigo = codigo;
     }
 
+    public int getQntLugares() {
+        return qntLugares;
+    }
+
+    public void setQntLugares(int qntLugares) {
+        this.qntLugares = qntLugares;
+    }
 
 }

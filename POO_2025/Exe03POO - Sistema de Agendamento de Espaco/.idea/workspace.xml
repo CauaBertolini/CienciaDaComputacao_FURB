@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entities/Cargo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Colaborador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Reserva.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enums/EnumSetor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/Exe02POO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/Exe02POO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Entities/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Entities/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Entities/ItemCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Entities/ItemCompra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Entities/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Entities/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Entities/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Entities/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Enums/Unidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Enums/Unidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exe02POO/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../POO_2025.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../POO_2025.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/POO_2025/Entities/ItemCompra.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/POO_2025/Entities/ItemCompra.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/POO_2025/Enums/Unidade.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/POO_2025/Enums/Unidade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/POO_2025/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/POO_2025/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/POO_2025/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/POO_2025/main.class" afterDir="false" />
+    <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="Criação do projeto Base">
+      <change afterPath="$PROJECT_DIR$/src/Entities/HoraReuniao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entities/Program.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entities/ReservasMes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entities/Sala.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Cargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Colaborador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Colaborador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reserva.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "CauaBertolini"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CauaBertolini/CienciaDaComputacao_FURB.git",
+    "accountId": "328dfd78-4e20-45b6-a1f5-d18b2f409a10"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -51,9 +54,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cbertolini/Documents/GitHub/CienciaDaComputacao_FURB/POO_2025/Exe03POO - Sistema de Agendamento de Espaco",
@@ -81,11 +86,32 @@
       <option name="presentableId" value="Default" />
       <updated>1755688752536</updated>
       <workItem from="1755688753626" duration="5000" />
-      <workItem from="1755688955228" duration="413000" />
+      <workItem from="1755688955228" duration="8781000" />
     </task>
+    <task id="LOCAL-00001" summary="Criação do projeto Base">
+      <option name="closed" value="true" />
+      <created>1755689389225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755689389225</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Criação do projeto Base">
+      <option name="closed" value="true" />
+      <created>1755689423231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755689423231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Criação do projeto Base" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação do projeto Base" />
   </component>
 </project>

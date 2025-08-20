@@ -6,6 +6,8 @@ public class Colaborador {
     private String nome;
     private Cargo cargo;
     private EnumSetor setor;
+    private int codigo;
+    private int ramal;
 
     public Colaborador(String nome, Cargo cargo, EnumSetor setor) {
         this.setNome(nome);
@@ -37,4 +39,11 @@ public class Colaborador {
         this.setor = setor;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
 }
