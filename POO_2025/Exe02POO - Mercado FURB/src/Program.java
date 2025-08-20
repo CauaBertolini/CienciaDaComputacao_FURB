@@ -32,8 +32,12 @@ public class Program {
 
         List<String> opcoesDeVenda = new ArrayList<>();
 
-
         int opcaoMenu;
+        int opcaoProduto;
+        int quantidadeDeCompra;
+        double precoProduto;
+
+        Compra compraAtual = new Compra();
 
         do {
             String tituloPrincipal = "Mercado FURB";
@@ -44,12 +48,29 @@ public class Program {
                 case 1:
                     String tituloVendas = "Vendendo! Selecione o produto que deseja.";
                     mostrarMenu(tituloVendas, (ArrayList<Produto>) estoqueMercado);
+                    opcaoProduto = scanner.nextInt();
+
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("Informe a quantidade: ");
+                    quantidadeDeCompra = scanner.nextInt();
+
+                    System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+                    System.out.println("Informe o preço unitário: ");
+                    precoProduto = scanner.nextDouble();
+
+                    Produto produtoAdicionar = estoqueMercado.get(opcaoProduto-1);
+
+                    ItemCompra item = new ItemCompra(produtoAdicionar, precoProduto, quantidadeDeCompra, 0);
+
+                    compraAtual.adicionarItem(item);
 
                     break;
                 case 2:
                     //Métod
                     break;
+
                 case 3:
+                    historicoDeCompras.add(compraAtual);
                     sair = true;
                     break;
                 default:
