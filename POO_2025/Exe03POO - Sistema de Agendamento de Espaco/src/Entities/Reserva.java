@@ -8,8 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Reserva {
-
-    DateTimeFormatter formatoPadraoHora = DateTimeFormatter.ofPattern("dd-MM-yyyy HH");
+    private DateTimeFormatter formatoHorario = DateTimeFormatter.ofPattern("dd-MM-yyyy HH");
     private LocalDateTime dataHoraInicio;
     private LocalDateTime dataHoraFim;
     private Sala salaReserva;
@@ -43,7 +42,7 @@ public class Reserva {
     }
 
     public void setDataHoraInicio(String dataHoraInicio) {
-        this.dataHoraInicio = LocalDateTime.parse(dataHoraInicio, formatoPadraoHora);
+        this.dataHoraInicio = LocalDateTime.parse(dataHoraInicio, formatoHorario);
     }
 
     public LocalDateTime getDataHoraFim() {
@@ -51,7 +50,7 @@ public class Reserva {
     }
 
     public void setDataHoraFim(String dataHoraFim) {
-        this.dataHoraFim = LocalDateTime.parse(dataHoraFim, formatoPadraoHora);
+        this.dataHoraFim = LocalDateTime.parse(dataHoraFim, formatoHorario);
     }
 
     public int getCodigo() {

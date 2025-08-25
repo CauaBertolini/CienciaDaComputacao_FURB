@@ -5,8 +5,10 @@ public class Sala {
     private int codigo;
     private int qntLugares;
 
-    public Sala(String nome, int qntLugares) {
-
+    public Sala(String nome, int qntLugares, int id) {
+        this.setNome(nome);
+        this.setQntLugares(qntLugares);
+        this.setCodigo(id);
     }
 
     public String getNome() {

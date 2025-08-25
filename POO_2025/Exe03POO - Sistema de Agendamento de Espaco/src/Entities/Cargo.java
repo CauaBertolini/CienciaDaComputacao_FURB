@@ -13,7 +13,7 @@ public class Cargo {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) throws IllegalArgumentException {
         this.nome = nome;
     }
 
@@ -21,9 +21,7 @@ public class Cargo {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(int codigo) throws IllegalArgumentException {
         this.codigo = codigo;
     }
-
-
 }

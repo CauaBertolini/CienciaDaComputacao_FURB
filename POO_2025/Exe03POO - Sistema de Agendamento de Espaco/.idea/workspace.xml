@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="Criação do projeto Base">
-      <change afterPath="$PROJECT_DIR$/src/Entities/HoraReuniao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/ReservasMes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/Sala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Cargo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Colaborador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Colaborador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/ReservasMes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/ReservasMes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Sala.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "CauaBertolini"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CauaBertolini&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CauaBertolini/CienciaDaComputacao_FURB.git",
-    "accountId": "328dfd78-4e20-45b6-a1f5-d18b2f409a10"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CauaBertolini/CienciaDaComputacao_FURB.git&quot;,
+    &quot;accountId&quot;: &quot;328dfd78-4e20-45b6-a1f5-d18b2f409a10&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -55,11 +53,13 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cbertolini/Documents/GitHub/CienciaDaComputacao_FURB/POO_2025/Exe03POO - Sistema de Agendamento de Espaco",
     "node.js.detected.package.eslint": "true",
@@ -67,6 +67,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,6 +88,7 @@
       <updated>1755688752536</updated>
       <workItem from="1755688753626" duration="5000" />
       <workItem from="1755688955228" duration="8781000" />
+      <workItem from="1756118757912" duration="5434000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do projeto Base">
       <option name="closed" value="true" />
