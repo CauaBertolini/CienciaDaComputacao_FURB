@@ -1,18 +1,20 @@
 package Entities;
 
+import Enums.EnumCargo;
 import Enums.EnumSetor;
 
 public class Colaborador {
     private String nome;
-    private Cargo cargo;
+    private EnumCargo cargo;
     private EnumSetor setor;
     private int codigo;
     private int ramal;
 
-    public Colaborador(String nome, Cargo cargo, EnumSetor setor) {
+    public Colaborador(String nome, EnumCargo cargo, EnumSetor setor, int codigo) {
         this.setNome(nome);
         this.setCargo(cargo);
         this.setSetor(setor);
+        this.setCodigo(codigo);
     }
 
     public String getNome() {
@@ -23,11 +25,11 @@ public class Colaborador {
         this.nome = nome;
     }
 
-    public Cargo getCargo() {
+    public EnumCargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo) {
+    public void setCargo(EnumCargo cargo) {
         this.cargo = cargo;
     }
 
