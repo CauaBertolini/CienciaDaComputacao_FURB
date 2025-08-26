@@ -21,7 +21,7 @@ public class Colaborador {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) throws IllegalArgumentException {
         this.nome = nome;
     }
 
@@ -29,7 +29,7 @@ public class Colaborador {
         return cargo;
     }
 
-    public void setCargo(EnumCargo cargo) {
+    public void setCargo(EnumCargo cargo) throws IllegalArgumentException {
         this.cargo = cargo;
     }
 
@@ -37,7 +37,7 @@ public class Colaborador {
         return setor;
     }
 
-    public void setSetor(EnumSetor setor) {
+    public void setSetor(EnumSetor setor) throws IllegalArgumentException {
         this.setor = setor;
     }
 
@@ -45,7 +45,7 @@ public class Colaborador {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(int codigo) throws IllegalArgumentException {
         this.codigo = codigo;
     }
 }

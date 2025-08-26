@@ -15,7 +15,7 @@ public class Sala {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) throws IllegalArgumentException {
         this.nome = nome;
     }
 
@@ -23,7 +23,7 @@ public class Sala {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(int codigo) throws IllegalArgumentException {
         this.codigo = codigo;
     }
 
@@ -31,7 +31,7 @@ public class Sala {
         return qntLugares;
     }
 
-    public void setQntLugares(int qntLugares) {
+    public void setQntLugares(int qntLugares) throws IllegalArgumentException {
         this.qntLugares = qntLugares;
     }
 
