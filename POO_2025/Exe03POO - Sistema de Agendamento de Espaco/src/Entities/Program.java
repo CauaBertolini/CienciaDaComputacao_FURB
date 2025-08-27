@@ -3,8 +3,11 @@ package Entities;
 import Enums.EnumCargo;
 import Enums.EnumSetor;
 
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.Callable;
+
 
 public class Program {
 
@@ -32,11 +35,14 @@ public class Program {
                 "Lista de colaboradores",
                 "Cadastrar sala - NULL", "Sair" };
         boolean executar = true;
-
+        int opc = 0;
         do {
             exibirMenu("Reserva de Salas", opcoesMenu_principal);
             System.out.print("Sua escolha: ");
-            int opc = scanner.nextInt();
+            opc = scanner.nextInt();
+
+            // Mudar para ler STRING e converter com TRY CATCH para INTEGER
+
             switch (opc) {
                 case 1:
                     cadastrarReserva(scanner);
@@ -48,16 +54,18 @@ public class Program {
                     exibirListaDeReservas();
                     break;
                 case 4:
-                    exibirListaColaboradores("Colaboradores", colaboradores);
+                    if (colaboradores.size() > 0) {
+                        exibirListaColaboradores("Colaboradores", colaboradores);
+                    } else {
+                        System.out.println("Não há colaboradores cadastrados no momento.");
+                    }
                     break;
                 case 5:
-
                     break;
                 case 6:
                     executar = false;
                     break;
             }
-
         } while (executar);
 
     }
@@ -72,38 +80,44 @@ public class Program {
 
         if (novaReserva != null) {
 
-            while (!cancelar || !concluido) {
+            while (!cancelar && !concluido) {
 
                 String[] opcoesMenu_reservarSala = { "Gerenciar lista de participantes",
                         "Exibir lista de participantes", "Realocar reunião", "Confirmar reunião", "Cancelar" };
 
                 exibirMenu("Selecione ação", opcoesMenu_reservarSala);
+                System.out.print("Sua escolha: ");
                 int opc = scanner.nextInt();
 
                 switch (opc) {
 
                     case 1:
                         exibirTitulo("Gerenciando participantes");
-                        alterarListaDeParticipantes(scanner, novaReserva);
+                        alterarListaDeParticipantes(novaReserva, scanner);
                         break;
                     case 2:
                         exibirTitulo("Exibindo participantes");
-                        exibirListaParticipantes("Participantes atuais", novaReserva.getListaParticipantes());
+                        if (novaReserva.getListaParticipantes().size() > 0) {
+                            exibirListaColaboradores("Participantes atuais", novaReserva.getListaParticipantes());
+                        } else {
+                            System.out.println("Não há participantes escalados para essa reserva.");
+                        }
                         break;
                     case 3:
-
+                        exibirTitulo("Alterando sala");
+                        realocarReserva(novaReserva, scanner);
                         break;
 
                     case 4:
                         if (listaDeReservas.reservar(novaReserva)) {
-                            listaDeReservas.getListaDeReservasDoMes().add(novaReserva);
+                            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
                             System.out.println("Reserva confirmada com sucesso!");
                             concluido = true;
                         } else {
-                            System.out.println("Não foi possível confirmar a reserva, conflito de horários.");
+                            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                            System.out.println("Erro ao tentar reservar");
                         }
                         break;
-
                     case 5:
                         cancelar = true;
                         break;
@@ -150,17 +164,20 @@ public class Program {
         String dataComeco = dataReuniao + "-2025 " + horaComeco;
         String dataFim = dataReuniao + "-2025 " + horaFim;
 
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
         exibirListaSalas("Escolha a sala", salas);
-        System.out.println("Selecione: ");
+        System.out.print("Selecione: ");
         int salaId = scanner.nextInt();
 
-        Reserva novaReserva = new Reserva(dataComeco, dataFim, salas.get(salaId));
-        return novaReserva;
+        try {
+            Reserva novaReserva = new Reserva(dataComeco, dataFim, salas.get(salaId));
+            return novaReserva;
+        } catch (DateTimeParseException e) {
+            System.out.println("Informações de agendamento informadas de forma errada.");
+            return null;
+        }
     }
 
-    public void alterarListaDeParticipantes(Scanner scanner, Reserva novaReserva) {
+    public void alterarListaDeParticipantes(Reserva novaReserva, Scanner scanner) {
         boolean alterar = true;
         String[] opcoesMenu_alterarListaDeParticipantes = { "Adicionar Colaborador", "Remover Colaborador", "Voltar" };
 
@@ -172,16 +189,16 @@ public class Program {
             switch (opc) {
 
                 case 1:
-                    exibirTitulo("ALTERANDO - ADICIONANDO PARTICIPANTES");
+                    exibirTitulo("ADICIONANDO PARTICIPANTES");
 
                     adicionarColaboradores("Selecione os colaboradores para a reunião", novaReserva,
                             scanner);
                     break;
 
                 case 2:
-                    exibirTitulo("ALTERANDO - REMOVENDO PARTICIPANTES");
+                    exibirTitulo("REMOVENDO PARTICIPANTES");
 
-                    exibirListaParticipantes("Participantes atuais", novaReserva.getListaParticipantes());
+                    exibirListaColaboradores("Participantes atuais", novaReserva.getListaParticipantes());
                     System.out.println("Informe o código do colaborador que deseja remover: ");
                     int codigoFuncionario = scanner.nextInt();
 
@@ -216,16 +233,14 @@ public class Program {
 
             if (codigoFuncionario == 0) {
                 selecionando = false;
-                break;
-            }
-
-            if (verificarColaboradorPorId(codigoFuncionario)) {
-                if (reserva.adicionarParticipante(getColaboradorPorId(codigoFuncionario))) {
-                    System.out.println("Colaborador adicionado com sucesso!");
-                } else {
-                    System.out.println("Colaborador já está na lista de participantes.");
+            } else {
+                if (verificarColaboradorPorId(codigoFuncionario)) {
+                    if (reserva.adicionarParticipante(getColaboradorPorId(codigoFuncionario))) {
+                        System.out.println("Colaborador adicionado com sucesso!");
+                    } else {
+                        System.out.println("Colaborador já está na lista de participantes.");
+                    }
                 }
-                ;
             }
 
             System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -255,7 +270,28 @@ public class Program {
         return null;
     }
 
+    public void realocarReserva(Reserva novaReserva, Scanner scanner) {
+        boolean realocacaoValida = false;
+        while (!realocacaoValida) {
+            exibirListaSalas("Selecione uma nova sala", salas);
+            System.out.print("Sua escolha: (0 para cancelar) ");
+            int salaId = scanner.nextInt();
+            try {
+                novaReserva.setSalaReserva(salas.get(salaId));
+                realocacaoValida = true;
+            } catch (IndexOutOfBoundsException e ) {
+                System.out.println("Não existe uma sala para este ID");
+            } catch (IllegalArgumentException e) {
+                System.out.println("Você não forneceu um ID válido.");
+            } catch (Exception e) {
+                System.out.println("Erro ao tentar realocar sala, tente novamente");
+            }
+        }
+
+    }
+
     public void exibirListaDeReservas() {
+        exibirTitulo("Reservas Agendadas");
         if (listaDeReservas.getListaDeReservasDoMes().size() > 0) {
             for (Reserva r : listaDeReservas.getListaDeReservasDoMes()) {
                 System.out.println(r.getDataHoraInicio() + " - " + r.getDataHoraFim() + " | " + r.getSalaReserva());
@@ -342,29 +378,10 @@ public class Program {
         System.out.println(tituloMenu);
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         for (Sala sa : salas) {
-            System.out.printf("[ %d ] %s - %d lugares", sa.getCodigo(), sa.getNome(), sa.getQntLugares());
+            System.out.printf("[ %d ] %s - %d lugares", sa.getCodigoSala(), sa.getNome(), sa.getQntLugares());
             System.out.println();
         }
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-    }
-
-    public void exibirListaParticipantes(String tituloMenu, ArrayList<Colaborador> participantes) {
-        if (participantes.size() == 0) {
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            System.out.println("Nenhum participante adicionado até o momento.");
-            return;
-        } else {
-             System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            System.out.println(tituloMenu);
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            for (Colaborador pa : participantes) {
-                System.out.printf("[ %d ] %s", pa.getCodigo(), pa.getNome());
-                System.out.println();
-            }
-            
-        }
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
     }
 
     public void exibirListaColaboradores(String tituloMenu, ArrayList<Colaborador> colaboradores) {
@@ -375,8 +392,6 @@ public class Program {
             System.out.printf("[ %d ] %s", co.getCodigo(), co.getNome());
             System.out.println();
         }
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
     }
 
     public void exibirMenu(String tituloMenu, String opcoesMenu[]) {
@@ -397,7 +412,7 @@ public class Program {
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
         for (Sala sa : opcoesMenu) {
-            System.out.printf("[ %d ] %s - $d lugares", sa.getCodigo(), sa.getNome(), sa.getQntLugares());
+            System.out.printf("[ %d ] %s - $d lugares", sa.getCodigoSala(), sa.getNome(), sa.getQntLugares());
             System.out.println();
         }
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");

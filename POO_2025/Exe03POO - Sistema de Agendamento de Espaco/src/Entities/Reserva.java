@@ -1,13 +1,10 @@
 package Entities;
 
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 
 public class Reserva {
     private DateTimeFormatter formatoHorario = DateTimeFormatter.ofPattern("dd-MM-yyyy HH");
@@ -23,11 +20,21 @@ public class Reserva {
         this.salaReserva = salaReserva;
     }
 
+    @Override
+    public String toString() {
+        return this.getCodigoReserva() + " | " + this.dataHoraInicio.format(formatoHorario) + " - " + this.dataHoraFim.format(formatoHorario) + " | " + this.getSalaReserva().getNome();
+    }
+
     public boolean adicionarParticipante(Colaborador novoParticipante) {
         if (listaParticipantes != null) {
-            if (listaParticipantes.contains(novoParticipante) == false) {
-            listaParticipantes.add(novoParticipante);
-                return true;
+            if (listaParticipantes.contains(novoParticipante) == false && salaReserva != null) {
+                if (listaParticipantes.size() + 1 <= salaReserva.getQntLugares()) {
+                    listaParticipantes.add(novoParticipante);
+                    return true;
+                } else {
+                    System.out.println("Não foi possível adicionar colaborador pois a a quantidade de pessoas iria ultrapassar a capacidade da sala.");
+                    return false;
+                }
             } else {
                 return false;
             }
@@ -72,11 +79,11 @@ public class Reserva {
         this.dataHoraFim = LocalDateTime.parse(dataHoraFim, formatoHorario);
     }
 
-    public int getCodigo() {
+    public int getCodigoReserva() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) throws IllegalArgumentException {
+    public void setCodigoReserva(int codigo) throws IllegalArgumentException {
         this.codigo = codigo;
     }
 

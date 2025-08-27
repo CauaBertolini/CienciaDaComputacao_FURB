@@ -8,19 +8,22 @@ public class ReservasMes {
     private List<Reserva> listaDeReservasDoMes = new ArrayList<>();
 
     public boolean reservar(Reserva novaReserva) {
-        if (listaDeReservasDoMes != null) {
+        boolean reservaValida = false;
+        if (!listaDeReservasDoMes.isEmpty()) {
             for (Reserva outraReservaQualquer : listaDeReservasDoMes) {
-                if (novaReserva.getSalaReserva().equals(outraReservaQualquer.getSalaReserva())) {
-                    if (novaReserva.getDataHoraInicio().isBefore(outraReservaQualquer.getDataHoraFim()) ||
-                            novaReserva.getDataHoraFim().isAfter(outraReservaQualquer.getDataHoraInicio())) {
-                        return  false;
+                if (novaReserva.getSalaReserva().getCodigoSala() == outraReservaQualquer.getSalaReserva().getCodigoSala()) {
+                    if ((novaReserva.getDataHoraInicio().isAfter(novaReserva.getDataHoraFim()) || novaReserva.getDataHoraFim().isBefore(novaReserva.getDataHoraInicio())) ||
+                            (outraReservaQualquer.getDataHoraInicio().isEqual(novaReserva.getDataHoraInicio()) || outraReservaQualquer.getDataHoraInicio().isBefore(novaReserva.getDataHoraFim())) ||
+                            (outraReservaQualquer.getDataHoraFim().isEqual(novaReserva.getDataHoraFim()) || (outraReservaQualquer.getDataHoraFim().isAfter(novaReserva.getDataHoraInicio()) && outraReservaQualquer.getDataHoraFim().isBefore(novaReserva.getDataHoraFim()))))  {
+                        reservaValida = false;
                     }
                 }
             }
         } else {
             listaDeReservasDoMes.add(novaReserva);
+            reservaValida = true;
         }
-        return true;
+        return reservaValida;
     }
     //(novaReserva.getDataHoraInicio().isEqual(outraReservaQualquer.getDataHoraInicio())) || (novaReserva.getDataHoraInicio().isBefore(outraReservaQualquer.getDataHoraInicio()) && novaReserva.getDataHoraFim().isAfter(outraReservaQualquer.getDataHoraInicio())) || (novaReserva.getDataHoraInicio().isAfter(outraReservaQualquer.getDataHoraInicio()) && novaReserva.getDataHoraFim().isBefore(outraReservaQualquer.getDataHoraFim()))
 

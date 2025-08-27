@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="Criação do projeto Base">
-      <change afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Cargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Cargo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/ReservasMes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/ReservasMes.java" afterDir="false" />
@@ -49,28 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cbertolini/Documents/GitHub/CienciaDaComputacao_FURB/POO_2025/Exe03POO - Sistema de Agendamento de Espaco",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cbertolini/Documents/GitHub/CienciaDaComputacao_FURB/POO_2025/Exe03POO - Sistema de Agendamento de Espaco&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -89,6 +88,7 @@
       <workItem from="1755688753626" duration="5000" />
       <workItem from="1755688955228" duration="8781000" />
       <workItem from="1756118757912" duration="5434000" />
+      <workItem from="1756291795968" duration="10414000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do projeto Base">
       <option name="closed" value="true" />

@@ -25,10 +25,7 @@ public class Program {
 
         List<Compra> historicoDeCompras = new ArrayList<>();
 
-        List<String> opcoesDoMenu = new ArrayList<>();
-        opcoesDoMenu.add("Iniciar Venda");
-        opcoesDoMenu.add("Gerenciar Produtos");
-        opcoesDoMenu.add("Sair");
+        String[] opcoesDoMenu = {"Iniciar venda", "Gerenciar Produtos", "Sair"};
 
         List<String> opcoesDeVenda = new ArrayList<>();
 
@@ -103,6 +100,17 @@ public class Program {
         for (Produto op : opcoesMenu) {
             contador++;
             System.out.printf("[ %d ] %s", contador, op.getNome());
+            System.out.println();
+        }
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+    }
+
+    public void mostrarMenu(String tituloMenu, String[] opcoesMenu) {
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println(tituloMenu);
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+        for (int i = 0; i < opcoesMenu.length; i++) {
+            System.out.printf("[ %d ] %s", i, opcoesMenu[i]);
             System.out.println();
         }
         System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");

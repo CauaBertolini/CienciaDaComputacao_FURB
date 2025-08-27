@@ -8,7 +8,12 @@ public class Sala {
     public Sala(String nome, int qntLugares, int id) {
         this.setNome(nome);
         this.setQntLugares(qntLugares);
-        this.setCodigo(id);
+        this.setCodigoSala(id);
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome() + " ID: " + this.getCodigoSala();
     }
 
     public String getNome() {
@@ -19,11 +24,11 @@ public class Sala {
         this.nome = nome;
     }
 
-    public int getCodigo() {
+    public int getCodigoSala() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) throws IllegalArgumentException {
+    public void setCodigoSala(int codigo) throws IllegalArgumentException {
         this.codigo = codigo;
     }
 
