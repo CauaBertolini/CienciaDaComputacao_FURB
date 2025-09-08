@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="Criação do projeto Base">
-      <change beforePath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exe02POO - Mercado FURB/src/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/ReservasMes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/ReservasMes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Sala.java" afterDir="false" />
-    </list>
+    <list default="true" id="bb3b3cb5-bd35-431e-bdef-71f5b3ec4054" name="Changes" comment="Criação do projeto Base" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +82,7 @@
       <workItem from="1755688955228" duration="8781000" />
       <workItem from="1756118757912" duration="5434000" />
       <workItem from="1756291795968" duration="10414000" />
+      <workItem from="1757329241561" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do projeto Base">
       <option name="closed" value="true" />
