@@ -2,16 +2,19 @@ public class Retangulo {
     private Ponto2D superiorEsquerdo;
     private Ponto2D inferiorDireito;
 
-    public Retangulo(Ponto2D superiorEsquerdo, Ponto2D inferiorDireito) {
-        setSuperiorEsquerdo(inferiorDireito);
+    public Retangulo(Ponto2D superiorEsquerdo, Ponto2D inferiorDireito) throws IllegalArgumentException {
+        setSuperiorEsquerdo(superiorEsquerdo);
         setInferiorDireito(inferiorDireito);
     }
 
     @Override
     public String toString() {
-        return "Retângulo: \n" +
-                "Ponto Superior Esquerdo: X - " + superiorEsquerdo.getX() + " Y - "+ superiorEsquerdo.getY() +
-                "Ponto Inferior Direito: X - " + inferiorDireito.getX() + " Y - " +  inferiorDireito.getY();
+        return "Ponto Superior Esquerdo: X - " + superiorEsquerdo.getX() + " Y - "+ superiorEsquerdo.getY() + "\n" +
+                "Ponto Inferior Direito: X - " + inferiorDireito.getX() + " Y - " +  inferiorDireito.getY() + "\n" +
+                "Altura: " + getAltura() + "\n" +
+                "Largura: "+ getLargura() + "\n" +
+                "É quadrado: " + isQuadrado() + "\n" +
+                "Perímetro: " + getPerimetro();
     }
 
     public double area() {
@@ -22,12 +25,12 @@ public class Retangulo {
         return  altura * largura;
     }
 
-    public double perimetro() {
+    public double getPerimetro() {
         double perimetro = (getAltura()*2) + (getLargura()*2);
         return perimetro;
     }
 
-    public boolean contem(Ponto2D p) {
+    public boolean contem(Ponto2D p) throws IllegalArgumentException {
         if (p == null) {
             throw new IllegalArgumentException("Ponto inválido");
         }
@@ -55,12 +58,9 @@ public class Retangulo {
         return largura;
     }
 
-    public void setSuperiorEsquerdo(Ponto2D superiorEsquerdo) {
-        if (superiorEsquerdo == null) {
-            throw  new IllegalArgumentException("Pontos não formam um retângulo válido");
-        }
-        if (inferiorDireito != null && !(superiorEsquerdo.getX() < inferiorDireito.getX() && superiorEsquerdo.getY() > inferiorDireito.getY())) {
-            throw  new IllegalArgumentException("Pontos não formam um retângulo válido");
+    public void setSuperiorEsquerdo(Ponto2D superiorEsquerdo) throws IllegalArgumentException {
+        if (inferiorDireito != null) {
+            validarPontos(superiorEsquerdo, inferiorDireito);
         }
         this.superiorEsquerdo = superiorEsquerdo;
     }
@@ -69,18 +69,22 @@ public class Retangulo {
         return superiorEsquerdo;
     }
 
-    public void setInferiorDireito(Ponto2D inferiorDireito) {
-        if (inferiorDireito == null) {
-            throw new IllegalArgumentException("Pontos não formam um retângulo válido");
-        }
-        if (superiorEsquerdo != null && !(superiorEsquerdo.getX() < inferiorDireito.getX() && superiorEsquerdo.getY() > inferiorDireito.getY())) {
-            throw  new IllegalArgumentException("Pontos não formam um retângulo válido");
+    public void setInferiorDireito(Ponto2D inferiorDireito) throws IllegalArgumentException {
+        if (superiorEsquerdo != null) {
+            validarPontos(superiorEsquerdo, inferiorDireito);
         }
         this.inferiorDireito = inferiorDireito;
     }
 
     public Ponto2D getInferiorDireito() {
         return inferiorDireito;
+    }
+
+    public void validarPontos(Ponto2D superiorEsquerdo, Ponto2D inferiorDireito) throws IllegalArgumentException {
+        if (superiorEsquerdo.getX() > inferiorDireito.getX() ||
+                superiorEsquerdo.getY() < inferiorDireito.getY()) {
+            throw new IllegalArgumentException("Pontos não formam um retângulo válido");
+        }
     }
 
 }
