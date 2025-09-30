@@ -64,6 +64,7 @@ public class Principal {
                     break;
 
                 case 4:
+                    editarRetangulo();
                     break;
 
                 case 5:
@@ -80,18 +81,31 @@ public class Principal {
             }
 
         } while (executar);
-
     }
 
     public void editarRetangulo() {
         int indexRetanguloEditar = mostrarRetangulosMenu();
 
-        if (indexRetanguloEditar > 0 && indexRetanguloEditar <= retanguloList.size()) {
-            retanguloList.remove(indexRetanguloEditar);
+        if (indexRetanguloEditar >= 0 && indexRetanguloEditar <= retanguloList.size()) {
+            JOptionPane.showMessageDialog(null, retanguloList.get(indexRetanguloEditar).toString());
+
+            double x1SE = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe X1"));
+
+            double y1SE = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe Y1"));
+
+            double x2ID = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe X2"));
+
+            double y2ID = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe Y2"));
+
+            Ponto2D novoPontoSE = new Ponto2D(x1SE, y1SE);
+            Ponto2D novoPontoID = new Ponto2D(x2ID, y2ID);
+
+            retanguloList.get(indexRetanguloEditar).setInferiorDireito(novoPontoSE);
+            retanguloList.get(indexRetanguloEditar).setInferiorDireito(novoPontoID);
+
         } else {
             throw new IndexOutOfBoundsException("Opção fora Array");
         }
-
     }
 
     public void excluirRetangulo(int index) throws IndexOutOfBoundsException {
@@ -176,15 +190,14 @@ public class Principal {
 
         for(Retangulo retangulo : retanguloList) {
             contador++;
-            menu.append("Retângulo ").append(contador).append("\n");
+            menu.append(contador).append(" Retângulo").append("\n");
             menu.append("-----------------------\n");
-            menu.append(retangulo.toString()).append("\n");
-            menu.append("-----------------------");
         }
 
         String escolha = JOptionPane.showInputDialog(null, menu.toString(), "Lista de Retângulos", JOptionPane.INFORMATION_MESSAGE);
         int escolhaInt = Integer.parseInt(escolha);
-        return escolhaInt - 1;
+
+        return (escolhaInt-1);
     }
 
     public void exibirRetangulo(int index) {
