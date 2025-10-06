@@ -66,8 +66,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -83,6 +83,7 @@
       <workItem from="1756118757912" duration="5434000" />
       <workItem from="1756291795968" duration="10414000" />
       <workItem from="1757329241561" duration="13000" />
+      <workItem from="1759748954810" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do projeto Base">
       <option name="closed" value="true" />
