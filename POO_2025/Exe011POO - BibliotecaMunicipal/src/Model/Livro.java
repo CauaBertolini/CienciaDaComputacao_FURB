@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 public class Livro extends ItemBiblioteca {
     public Livro(String nome) {

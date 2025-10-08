@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
