@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CienciaDaComputacao_FURB.iml" filepath="$PROJECT_DIR$/.idea/CienciaDaComputacao_FURB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Ex00/Ex00.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Ex00/Ex00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe008POO - ContaBancaria/Exe008POO - ContaBancaria.iml" filepath="$PROJECT_DIR$/POO_2025/Exe008POO - ContaBancaria/Exe008POO - ContaBancaria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe01/Exe01.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe01/Exe01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe011POO - BibliotecaMunicipal/Exe011POO - BibliotecaMunicipal.iml" filepath="$PROJECT_DIR$/POO_2025/Exe011POO - BibliotecaMunicipal/Exe011POO - BibliotecaMunicipal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe01POO - Conta de Luz/Exe01POO - Conta de Luz.iml" filepath="$PROJECT_DIR$/POO_2025/Exe01POO - Conta de Luz/Exe01POO - Conta de Luz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe02/Exe02.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe02/Exe02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe02POO - Mercado FURB/Exe02POO - Mercado FURB.iml" filepath="$PROJECT_DIR$/POO_2025/Exe02POO - Mercado FURB/Exe02POO - Mercado FURB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe03/Exe03.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe03/Exe03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe03POO - Sistema de Agendamento de Espaco/Exe03POO - Sistema de Agendamento de Espaco.iml" filepath="$PROJECT_DIR$/POO_2025/Exe03POO - Sistema de Agendamento de Espaco/Exe03POO - Sistema de Agendamento de Espaco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe04/Exe04.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe04/Exe04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe05/Exe05.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe05/Exe05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe06/Exe06.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe06/Exe06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe07/Exe07.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe07/Exe07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/POO_2025/Exe07POO - Forma Geométrica/Exe07POO - Forma Geométrica.iml" filepath="$PROJECT_DIR$/POO_2025/Exe07POO - Forma Geométrica/Exe07POO - Forma Geométrica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe08/Exe08.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe08/Exe08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe09/Exe09.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe09/Exe09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe10/Exe10.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe10/Exe10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe11/Exe11.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe11/Exe11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe12/Exe12.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe12/Exe12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe13/Exe13.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe13/Exe13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe14/Exe14.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe14/Exe14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe15/Exe15.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe15/Exe15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe16/Exe16.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe16/Exe16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe09/Exe17.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe09/Exe17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista05/Exe10/Exe18.iml" filepath="$PROJECT_DIR$/IP_2025/Lista05/Exe10/Exe18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe09/Exe19.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe09/Exe19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe01/Exe2.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe01/Exe2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe20/Exe20.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe20/Exe20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe21/Exe21.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe21/Exe21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe22/Exe22.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe22/Exe22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe23/Exe23.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe23/Exe23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe24/Exe24.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe24/Exe24.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe25/Exe25.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe25/Exe25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe26/Exe26.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe26/Exe26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe27/Exe27.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe27/Exe27.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe28/Exe28.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe28/Exe28.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe29/Exe29.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe29/Exe29.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe02/Exe3.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe02/Exe3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe30/Exe30.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe30/Exe30.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe31/Exe31.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe31/Exe31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe32/Exe32.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe32/Exe32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe33/Exe33.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe33/Exe33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe34/Exe34.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe34/Exe34.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe08/Exe35.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe08/Exe35.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe20/Exe36.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe20/Exe36.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe07/Exe37.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe07/Exe37.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe06/Exe38.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe06/Exe38.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe05/Exe39.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe05/Exe39.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe03/Exe4.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe03/Exe4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe04/Exe40.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe04/Exe40.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe03/Exe41.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe03/Exe41.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe02/Exe42.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe02/Exe42.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe01/Exe43.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe01/Exe43.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe10/Exe44.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe10/Exe44.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe11/Exe45.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe11/Exe45.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe12/Exe46.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe12/Exe46.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe13/Exe47.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe13/Exe47.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe14/Exe48.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe14/Exe48.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe15/Exe49.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe15/Exe49.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe04/Exe5.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe04/Exe5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe16/Exe50.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe16/Exe50.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe17/Exe51.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe17/Exe51.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe18/Exe52.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe18/Exe52.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe19/Exe53.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe19/Exe53.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe19/Exe54.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe19/Exe54.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe18/Exe55.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe18/Exe55.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe17/Exe56.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe17/Exe56.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe16/Exe57.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe16/Exe57.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe15/Exe58.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe15/Exe58.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe14/Exe59.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe14/Exe59.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe05/Exe6.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe05/Exe6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe13/Exe60.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe13/Exe60.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe12/Exe61.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe12/Exe61.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe11/Exe62.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe11/Exe62.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe10/Exe63.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe10/Exe63.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe01/Exe64.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe01/Exe64.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe02/Exe65.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe02/Exe65.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe03/Exe66.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe03/Exe66.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe04/Exe67.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe04/Exe67.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe05/Exe68.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe05/Exe68.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe06/Exe69.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe06/Exe69.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe06/Exe7.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe06/Exe7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe07/Exe70.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe07/Exe70.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe08/Exe71.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe08/Exe71.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista04/Exe09/Exe72.iml" filepath="$PROJECT_DIR$/IP_2025/Lista04/Exe09/Exe72.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe04/Exe73.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe04/Exe73.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe27/Exe74.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe27/Exe74.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe03/Exe75.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe03/Exe75.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe26/Exe76.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe26/Exe76.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe02/Exe77.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe02/Exe77.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe25/Exe78.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe25/Exe78.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe01/Exe79.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe01/Exe79.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe07/Exe8.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe07/Exe8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe24/Exe80.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe24/Exe80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe08/Exe81.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe08/Exe81.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe23/Exe82.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe23/Exe82.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe07/Exe83.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe07/Exe83.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe22/Exe84.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe22/Exe84.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe06/Exe85.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe06/Exe85.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe21/Exe86.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe21/Exe86.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe05/Exe87.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe05/Exe87.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista03/Exe20/Exe88.iml" filepath="$PROJECT_DIR$/IP_2025/Lista03/Exe20/Exe88.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe09/Exe89.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe09/Exe89.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista02/Exe08/Exe9.iml" filepath="$PROJECT_DIR$/IP_2025/Lista02/Exe08/Exe9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe11/Exe90.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe11/Exe90.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe10/Exe91.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe10/Exe91.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe15/Exe92.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe15/Exe92.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe14/Exe93.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe14/Exe93.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe13/Exe94.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe13/Exe94.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe12/Exe95.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe12/Exe95.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe19/Exe96.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe19/Exe96.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe18/Exe97.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe18/Exe97.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe17/Exe98.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe17/Exe98.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IP_2025/Lista01/Exe16/Exe99.iml" filepath="$PROJECT_DIR$/IP_2025/Lista01/Exe16/Exe99.iml" />
+    </modules>
+  </component>
+</project>

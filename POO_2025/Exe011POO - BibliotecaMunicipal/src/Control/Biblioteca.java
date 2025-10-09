@@ -14,26 +14,66 @@ public class Biblioteca {
             if (item == null) {
                 throw new IllegalArgumentException("Item deve ser informado");
             }
+            itensBiblioteca.add(item);
         }
 
         public String listar() {
             String dados = "";
             int contador = 0;
-            dados += contador + " - ";
             for (ItemBiblioteca item: itensBiblioteca) {
-
+                dados += contador + " - ";
                 if (item instanceof Livro) {
-                    dados += "Livro";
+                    dados += "Livro ";
                 } else if (item instanceof Dvd) {
-                    dados += "DVD";
+                    dados += "DVD ";
                 } else if (item instanceof Revista) {
-                    dados += "Revista";
+                    dados += "Revista ";
+                } else {
+                    dados += "Outro ";
                 }
-
                 dados += item.getTitulo() + " | Taxa de Multa: " + item.getMulta() + " | Prazo padrão:" + item.getPrazo() + " | Data útlimo empréstimo: " + item.getDataEmprestimo() + "\n";
                 contador++;
             }
             dados += "";
             return dados;
+        }
+
+        public String listarEmprestados() {
+            String dados = "";
+            int contador = 0;
+            for (ItemBiblioteca item: itensBiblioteca) {
+                if (item.isEmprestado()) {
+                    dados += contador + " - ";
+                    if (item instanceof Livro) {
+                        dados += "Livro ";
+                    } else if (item instanceof Dvd) {
+                        dados += "DVD ";
+                    } else if (item instanceof Revista) {
+                        dados += "Revista ";
+                    } else {
+                        dados += "Outro ";
+                    }
+                    dados += item.getTitulo() + " | Taxa de Multa: " + item.getMulta() + " | Prazo padrão:" + item.getPrazo() + " | Data útlimo empréstimo: " + item.getDataEmprestimo() + "\n";
+                    contador++;
+                }
+            }
+            dados += "";
+            return dados;
+        }
+
+        public ArrayList<ItemBiblioteca> getItensBiblioteca()
+        {
+            return itensBiblioteca;
+        }
+
+        public boolean validarOpcaoInserida(char opcao) {
+            switch (opcao) {
+                case 'L':
+                case 'R':
+                case 'D':
+                case 'O':
+                    return true;
+            }
+            return false;
         }
 }
