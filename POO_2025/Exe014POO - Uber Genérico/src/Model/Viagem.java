@@ -27,6 +27,22 @@ public class Viagem {
         setHoraInicio(LocalDateTime.now());
         setHoraFim(LocalDateTime.now().plusMinutes(30));
     }
+    public double calcularValorCorrida() {
+        double valorCorrida = 5 + calcularDistancia() + (0.10 * calcularTempoEstimado());
+        return valorCorrida;
+    }
+
+    public int calcularTempoEstimado() {
+        int tempoEstimado = (int) (calcularDistancia() / 0.83);
+        return tempoEstimado;
+    }
+
+    public double calcularDistancia() {
+        if (getDistancia() == 0) {
+            setDistancia((int) Math.random() * 21);
+        }
+        return distancia;
+    }
 
     public Passageiro getPassageiro() {
         return passageiro;
@@ -44,27 +60,11 @@ public class Viagem {
         this.motorista = motorista;
     }
 
-    public double calcularValorCorrida() {
-        return 0;
-    }
-
-    public int calcularTempoEstimado() {
-        return 0;
-    }
-
-    public double calcularDistancia() {
-        if (getDistancia() == 0) {
-            setDistancia((int) Math.random() * 21);
-        }
-        return distancia;
-    }
-
     public void setDistancia(int distancia) {
         if (!Utilitario.ValorMenorIgualAZero(distancia)) {
             this.distancia = distancia;
         }
     }
-
     public int getDistancia() {
         return distancia;
     }
