@@ -1,13 +1,18 @@
 package Model;
 
 import java.util.ArrayList;
+import Exception.ValorMenorIgualAZeroException;
+import Exception.CampoVazioOuNuloException;
+import Exception.Utilitario;
+
 
 public abstract class Pessoa {
     private String nome;
-    private ArrayList<Viagem> listaViagens = new ArrayList<>();
+    private ArrayList<Viagem> listaViagens;
 
     public Pessoa(String nome) {
         setNome(nome);
+        listaViagens = new ArrayList<>();
     }
 
     public boolean incluirViagem(Viagem v) {
@@ -26,7 +31,9 @@ public abstract class Pessoa {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String nome) throws CampoVazioOuNuloException {
+        if (Utilitario.CampoVazioOuNulo(nome)) {
+            this.nome = nome;
+        }
     }
 }

@@ -1,7 +1,7 @@
 package Exception;
 
 public class ValorMenorIgualAZeroException extends RuntimeException {
-    public ValorMenorIgualAZeroException(String message) {
-        super(message);
+    public ValorMenorIgualAZeroException() {
+        super("Valor não pode ser menor que ou igual a zero.");
     }
 }
