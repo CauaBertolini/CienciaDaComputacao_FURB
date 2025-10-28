@@ -27,6 +27,17 @@ public class Viagem {
         setHoraInicio(LocalDateTime.now());
         setHoraFim(LocalDateTime.now().plusMinutes(30));
     }
+
+    @Override
+    public String toString() {
+        return "Viagem " + getPontoPartida() + " - " + getDestino() + "\n" +
+                "Motorista: " + getMotorista().getNome() + "\n" +
+                "Passageiro: " + getPassageiro().getNome() + "\n" +
+                "Hora Início: " + getHoraInicio() + " Hora Fim: " + getHoraFim() + "\n" +
+                "Distâcia: " + getDistancia() + "\n" +
+                "Valor: R$ " + calcularValorCorrida() + "\n";
+    }
+
     public double calcularValorCorrida() {
         double valorCorrida = 5 + calcularDistancia() + (0.10 * calcularTempoEstimado());
         return valorCorrida;

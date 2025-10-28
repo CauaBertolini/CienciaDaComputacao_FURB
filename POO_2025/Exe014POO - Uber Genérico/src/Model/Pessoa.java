@@ -16,15 +16,27 @@ public abstract class Pessoa {
     }
 
     public boolean incluirViagem(Viagem v) {
+        if (!Utilitario.CampoVazioOuNulo(v)) {
+            listaViagens.add(v);
+        }
         return true;
     }
 
     public boolean removerViagem(Viagem v) {
+        for (Viagem vi : listaViagens) {
+            if (vi.equals(v)) {
+                listaViagens.remove(vi);
+            }
+        }
         return false;
     }
 
-    public void listarViagens() {
-
+    public String listarViagens() {
+        String retorno = "";
+        for (Viagem vi : listaViagens) {
+            retorno += vi.toString();
+        }
+        return retorno;
     }
 
     public String getNome() {

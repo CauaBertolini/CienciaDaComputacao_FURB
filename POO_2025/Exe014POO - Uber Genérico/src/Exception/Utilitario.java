@@ -1,9 +1,18 @@
 package Exception;
 
+import Model.Viagem;
+
 public class Utilitario {
 
     public static boolean CampoVazioOuNulo(String campo) throws CampoVazioOuNuloException {
         if (campo.isEmpty() || campo == null) {
+            throw new CampoVazioOuNuloException();
+        }
+        return false;
+    }
+
+    public static boolean CampoVazioOuNulo(Viagem v) throws CampoVazioOuNuloException {
+        if (v == null) {
             throw new CampoVazioOuNuloException();
         }
         return false;
