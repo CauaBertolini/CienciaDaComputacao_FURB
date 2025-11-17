@@ -1,0 +1,125 @@
+-- 1 Selecione os nomes dos clientes e os respectivos nomes dos animais cadastrados.
+
+SELECT c.nm_cliente, a.nm_animal
+	FROM cliente c 
+	INNER JOIN animal a
+	ON c.cd_cliente = a.cd_cliente;
+
+
+-- 2 Liste os detalhes dos produtos e as descrições de suas categorias.
+
+SELECT p.cd_produto, p.nm_produto, p.ds_produto, p.vl_custo, p.vl_venda, p.qt_estoque, p.cd_categoria, c.ds_categoria
+	FROM produto p
+	INNER JOIN categoria c
+	ON p.cd_categoria = c.cd_categoria;
+
+
+-- 3 Mostre os agendamentos com as informações do prestador de serviço associado.
+
+SELECT a.*, p.*
+	FROM agendamento a
+	INNER JOIN prestador_servico p
+	ON a.cd_prestador = p.cd_prestador;
+
+
+-- 4 Liste os serviços agendados e as descrições de cada serviço.
+
+SELECT a.*, s.ds_servico
+	FROM angendamento_servico a
+	INNER JOIN servico s
+	ON a.cd_servico = s.cd_servico;
+
+
+-- 5 Selecione os nomes dos prestadores e os serviços que eles prestam.
+
+SELECT p.nm_prestador, s.ds_servico
+	FROM prestador_servico p
+	INNER JOIN servico_prestador sp
+	ON p.cd_prestador = sp.cd_prestador
+	INNER JOIN servico s 
+	ON sp.cd_servico = s.cd_servico
+
+
+-- 6 Mostre as notas fiscais e os nomes dos clientes que as receberam.
+
+SELECT nf.*, c.nm_cliente
+	FROM nota_fiscal nf 
+	INNER JOIN cliente c
+	ON nf.cd_cliente = c.cd_cliente;
+
+
+-- 7 Liste os itens de nota fiscal e os respectivos nomes dos produtos.
+
+SELECT it.*, p.nm_produto
+	FROM item_nota_fiscal it  
+	INNER JOIN produto p
+	ON it.cd_produto = p.cd_produto;
+
+
+-- 8 Selecione os nomes dos animais, suas raças e suas respectivas espécies.
+
+SELECT a.nm_animal, r.nm_raca, e.nm_especie
+	FROM animal a
+	INNER JOIN raca r
+	ON a.cd_raca = r.cd_raca
+	INNER JOIN especie e
+	ON r.cd_especie = e.cd_especie
+
+
+-- 9 Mostre os agendamentos e os nomes dos clientes e animais associados.
+
+-- Não consegui identificar uma forma de fazer essa associação // ERRO NA TABELA
+
+
+-- 10 Liste os endereços dos clientes, mostrando o logradouro e o município.
+
+SELECT c.nm_cliente, e.ds_logradouro, m.nm_municipio
+	FROM cliente c
+	INNER JOIN endereco e
+	ON c.cd_endereco = e.cd_endereco
+	INNER JOIN municipio m
+	ON e.cd_municipio = m.cd_municipio
+ 
+
+-- 11 Selecione os prestadores de serviço e os municípios em que seus endereços estão localizados.
+
+SELECT ps.nm_prestador, m.nm_municipio
+	FROM prestador_servico ps
+	JOIN endereco e ON ps.cd_endereco = e.cd_endereco
+	JOIN municipio m ON e.cd_municipio = m.cd_municipio;
+
+
+-- 12 Mostre as notas fiscais e os produtos comprados, junto com as quantidades e valores.
+
+SELECT nf.cd_nota_fiscal, p.nm_produto, inf.qt_item_nota_fiscal, inf.vl_item_nota_fiscal
+	FROM nota_fiscal nf
+	JOIN item_nota_fiscal inf ON nf.cd_nota_fiscal = inf.cd_nota_fiscal
+	JOIN produto p ON inf.cd_produto = p.cd_produto;
+ 
+
+-- 13 Liste os agendamentos e os serviços prestados, mostrando os valores totais dos serviços agendados.
+
+SELECT ag.nr_agendamento,
+       SUM(asv.qt_servico * asv.vl_servico) AS vl_total_servicos
+FROM agendamento_servico asv
+JOIN agendamento ag ON asv.nr_agendamento = ag.nr_agendamento
+GROUP BY ag.nr_agendamento;
+
+
+-- 14 Selecione os prestadores de serviço que realizam serviços de valor superior a R$ 100,00.
+
+SELECT DISTINCT p.nm_prestador, s.ds_servico, s.vl_servico
+FROM prestador_servico p
+JOIN servico_prestador sp ON p.cd_prestador = sp.cd_prestador
+JOIN servico s ON sp.cd_servico = s.cd_servico
+WHERE s.vl_servico > 100.00;
+
+
+-- 15 Liste os animais, suas raças e as espécies a que pertencem, filtrando apenas as raças com nome "Poodle".
+
+SELECT a.nm_animal, r.nm_raca, e.nm_especi
+FROM animal a
+JOIN raca r ON a.cd_raca = r.cd_raca
+JOIN especie e ON r.cd_especie = e.cd_especie
+WHERE r.nm_raca = 'Poodle';
+

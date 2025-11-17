@@ -1,0 +1,67 @@
+-- Criando tabelas 
+CREATE TABLE cor
+( cd_cor INT PRIMARY KEY,
+	ds_cor VARCHAR(30)
+);
+
+CREATE TABLE marca
+( cd_marca INT PRIMARY KEY,
+	ds_marca VARCHAR(30)
+);
+
+CREATE TABLE modelo
+( cd_modelo INT PRIMARY KEY,
+	cd_marca INT REFERENCES marca(cd_marca),
+	ds_modelo VARCHAR(50)
+);
+
+CREATE TABLE localidade
+( cd_localidade INT PRIMARY KEY,
+	nm_localidade VARCHAR(50)
+);
+
+CREATE TABLE proprietario
+( cd_proprietario INT PRIMARY KEY,
+	cd_localidade INT REFERENCES localidade(cd_localidade),
+	nm_proprietario VARCHAR(50),
+	ds_logradouro VARCHAR(50),
+	ds_complemento VARCHAR(50),
+	ds_bairro VARCHAR(50),
+	nr_telefone VARCHAR(15),
+	ds_email VARCHAR(50),
+	sg_uf CHAR(2)
+);
+
+CREATE TABLE veiculo
+( nr_placa CHAR(7) PRIMARY KEY,
+	cd_cor INT REFERENCES cor(cd_cor),
+	cd_proprietario INT REFERENCES proprietario(cd_proprietario),
+	cd_modelo INT REFERENCES modelo(cd_modelo),
+	nr_ano_fab INT,
+	nr_ano_mod INT,
+	qt_km_rodado INT,
+	qt_portas INT,
+	ds_observacao VARCHAR(100)
+);
+
+CREATE TABLE combustivel 
+( cd_combustivel INT PRIMARY KEY,
+	ds_combustivel VARCHAR(30)
+);
+
+CREATE TABLE veiculo_combustivel
+( cd_combustivel INT REFERENCES combustivel(cd_combustivel),
+	nr_placa CHAR(7) REFERENCES veiculo(nr_placa),
+	PRIMARY KEY(cd_combustivel, nr_placa)
+);
+
+CREATE TABLE acessorio
+( cd_acessorio INT PRIMARY KEY,
+	ds_acessorio VARCHAR(50)
+);
+
+CREATE TABLE veiculo_acessorio
+( nr_placa CHAR(7) REFERENCES veiculo(nr_placa),
+	cd_acessorio INT REFERENCES acessorio(cd_acessorio),
+	PRIMARY KEY(nr_placa, cd_acessorio)
+);

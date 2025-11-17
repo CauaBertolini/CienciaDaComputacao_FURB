@@ -1,0 +1,136 @@
+-- 1 Contar quantos animais são de pequeno porte.
+
+SELECT COUNT(*)
+FROM animal a
+WHERE a.tp_porte = 'p'
+
+
+-- 2 Listar o valor total de notas fiscais emitidas no mês de outubro de 2024.
+
+SELECT SUM(vl_total)
+FROM nota_fiscal
+WHERE dt_emissao BETWEEN '2024-10-01' AND '2024-10-31'
+
+
+-- 3 Listar o total de agendamentos realizados por cada prestador de serviço.
+
+SELECT p.nm_prestador, COUNT(a.cd_agendamento) 
+FROM prestador_servico p JOIN agendamento a 
+ON p.cd_prestador = a.cd_prestador
+GROUp BY p.nm_prestador
+
+
+-- 4 Calcular o valor total dos serviços prestados por cada agendamento.
+
+SELECT a.nr_agendamento , SUM(ia.qt_servico * ia.vl_servico)
+FROM agendamento a JOIN agendamento_servico ia
+ON a.nr_agendamento = ia.nr_agendamento
+GROUP BY a.nr_agendamento
+
+
+-- 5 Calcular a média de idade dos animais de cada raça.
+
+SELECT r.nm_raca, AVG(TIMESTAMPDIFF(YEAR, a.dt_nascimento, CURDATE()))) 
+FROM animal a JOIN raca r 
+ON a.cd_raca = r.cd_raca
+GROUP BY r.nm_raca
+
+
+-- 6 Listar o total de produtos cadastrados por categoria.
+
+SELECT c.nm_categoria, COUNT(p.cd_produto)
+FROM categoria c JOIN produto p
+ON c.cd_categoria = p.cd_categoria
+GROUP BY c.nm_categoria
+
+
+-- 7 Listar as cidades com o número de clientes cadastrados, ordenando pelo maior número.
+
+SELECT m.nm_municipio, COUNT(DISTINCT c.cd_cliente) 
+FROM municipio m 
+JOIN endereco e 
+	ON e.cd_municipio = m.cd_municipio
+JOIN cliente c 
+	ON c.cd_cliente = e.cd_cliente
+GROUP BY m.nm_municipio  
+ORDER BY COUNT(DISTINCT c.cd_cliente) DESC
+
+
+-- 8 Calcular o valor total de vendas para cada cliente em notas fiscais.
+
+SELECT c.nm_cliente, SUM(nf.vl_total)
+FROM cliente c
+LEFT JOIN nota_fiscal nf
+	ON c.cd_cliente = nf.cd_cliente
+GROUP BY c.nm_cliente;
+
+
+-- 9 Obter o nome do prestador de serviço com o número de agendamentos.
+
+SELECT p.nm_prestador, COUNT(a.nr_agendamento) AS  "Número de Agendamentos"
+FROM prestador_servico p
+LEFT JOIN agendamento a
+	ON p.cd_prestador = a.cd_prestador
+GROUP BY p.nm_prestador
+
+-- LEFT JOIN para incluir prestadores se agendamento
+
+
+-- 10 Calcular a receita total de serviços prestados por cada prestador.
+
+SELECT p.nm_prestador, SUM(ase.vl_servico) AS receita_total
+FROM prestador_servico p
+JOIN agendamento a
+    ON p.cd_prestador = a.cd_prestador
+JOIN agendamento_servico ase
+    ON a.nr_agendamento = ase.nr_agendamento
+GROUP BY p.nm_prestador;
+
+
+-- 11 Calcular o valor médio dos produtos vendidos por categoria.
+
+SELECT c.nm_categoria, AVG(p.vl_produto)
+FROM categoria c
+JOIN produto p
+    ON c.cd_categoria = p.cd_categoria
+GROUP BY c.nm_categoria;
+
+
+-- 12 Listar os clientes que realizaram mais de 5 agendamentos.
+
+SELECT c.nm_cliente, COUNT(a.nr_agendamento)
+FROM cliente c
+JOIN agendamento a
+    ON c.cd_cliente = a.cd_cliente
+GROUP BY c.nm_cliente
+HAVING COUNT(a.nr_agendamento) > 5;
+
+
+-- 13 Calcular a receita média de cada prestador de serviço em agendamentos.
+
+SELECT p.nm_prestador, AVG(asv.vl_servico)
+FROM prestador_servico p
+JOIN agendamento a
+    ON p.cd_prestador = a.cd_prestador
+JOIN agendamento_servico asv
+    ON a.nr_agendamento = asv.nr_agendamento
+GROUP BY p.nm_prestador;
+
+-- 14 Listar as espécies com mais de 3 raças cadastradas.
+
+SELECT e.nm_especie, COUNT(r.cd_raca) AS total_racas
+FROM especie e
+JOIN raca r
+    ON e.cd_especie = r.cd_especie
+GROUP BY e.nm_especie
+HAVING COUNT(r.cd_raca) > 3;
+
+
+-- 15 Listar os clientes que possuem mais de um animal cadastrado.
+
+SELECT c.nm_cliente, COUNT(a.cd_animal) AS total_animais
+FROM cliente c
+JOIN animal a
+    ON c.cd_cliente = a.cd_cliente
+GROUP BY c.nm_cliente
+HAVING COUNT(a.cd_animal) > 1;

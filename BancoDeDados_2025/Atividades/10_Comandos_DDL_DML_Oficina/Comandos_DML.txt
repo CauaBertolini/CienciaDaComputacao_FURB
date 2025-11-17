@@ -1,0 +1,201 @@
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(1, 'azul');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(2, 'amarelo');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(3, 'verde');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(4, 'vermelho');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(5, 'roxo');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(6, 'lilás');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(7, 'rosa');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(8, 'ciano');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(9, 'preto');
+INSERT INTO cor(cd_cor, ds_cor)
+VALUES(10, 'branco');
+
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(101, 'Chevrolet');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(102, 'Citroen');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(103, 'Renault');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(104, 'BYD');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(105, 'Honda');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(106, 'Woskewagen');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(107, 'JEEP');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(108, 'FIAT');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(109, 'Ferrari');
+INSERT INTO marca(cd_marca, ds_marca)
+VALUES(110, 'Mercedes Benz');
+
+INSERT INTO modelo
+VALUES(2001, 109, 'SUV');
+INSERT INTO modelo
+VALUES(2002, 108, 'CEDAN');
+INSERT INTO modelo
+VALUES(2003, 105, 'CAMIONETE');
+INSERT INTO modelo
+VALUES(2004, 103, 'BOLINHA');
+INSERT INTO modelo
+VALUES(2005, 102, 'QUADRADO');
+INSERT INTO modelo
+VALUES(2006, 101, 'JIPE');
+INSERT INTO modelo
+VALUES(2007, 101, 'ESPORTIVO');
+INSERT INTO modelo
+VALUES(2008, 103, 'AUDI');
+INSERT INTO modelo
+VALUES(2009, 109, 'Chevrolet');
+INSERT INTO modelo
+VALUES(2010, 104, 'Chevrolet');
+
+INSERT INTO localidade
+VALUES (100, 'Sul');
+INSERT INTO localidade
+VALUES (200, 'Sudoeste');
+INSERT INTO localidade
+VALUES (300, 'Sudeste');
+INSERT INTO localidade
+VALUES (400, 'Norte');
+INSERT INTO localidade
+VALUES (500, 'Nordeste');
+INSERT INTO localidade
+VALUES (600, 'Centro');
+INSERT INTO localidade
+VALUES (700, 'Centro Oeste');
+INSERT INTO localidade
+VALUES (800, 'Centro Leste');
+INSERT INTO localidade
+VALUES (900, 'Estrangeiro');
+INSERT INTO localidade
+VALUES (1000, 'Extraterrestre');
+
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(1, 200, 'Jair Messias da Silva');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(2, 300, 'Gabriel Mattos');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(3, 700, 'Cauã Fernando Paolo');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(4, 100, 'Ana Clara Lopes Silva');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(5, 900, 'Isac Custodio Zottis');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(6, 1000, 'Anderson Silva');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(8, 500, 'Luiz Inácio Bolsonaro');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(9, 400, 'Joacir Correia');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(10, 300, 'Maria Betânia');
+INSERT INTO proprietario(cd_proprietario, cd_localidade, nm_proprietario)
+VALUES(12, 200, 'Marcos Aurélios');
+
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo, qt_portas)
+VALUES('MR70123', 12, 2001);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('MX11002', 9, 2005);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('HJS8723', 2, 2004);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('HIJS878', 1, 2009);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('PWKD020', 8, 2010);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('XSAD998' 3, 2002);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('MRR2922', 2, 2003);
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('KLS2124' 5, 2008)
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('13123KS', 12, 2007)
+INSERT INTO veiculo(nr_placa, cd_proprietario, cd_modelo)
+VALUES('HJW0923', 12, 2001)
+
+INSERT INTO combustivel
+VALUES(11, 'Etanol');
+INSERT INTO combustivel
+VALUES(21, 'Gasolina Comum');
+INSERT INTO combustivel
+VALUES(21, 'Diesel');
+INSERT INTO combustivel
+VALUES(31, 'Diesel S10');
+INSERT INTO combustivel
+VALUES(41, 'Gás');
+
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(11, 'KLS2124');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(21, '13123KS');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(31, 'KLS2124');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(41, 'KLS2124');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(21, 'KLS2124');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(41, '13123KS');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(21, 'HJS8723');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(31, 'XSAD998');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(41, 'MRR2922');
+INSERT INTO veiculo_combustivel(cd_combustivel, nr_placa)
+VALUES(11, 'HJW0923');
+
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (1, 'Ar-condicionado');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (2, 'Direção hidráulica');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (3, 'Rodas de liga leve');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (4, 'Airbag duplo');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (5, 'Freios ABS');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (6, 'Teto solar');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (7, 'Banco de couro');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (8, 'Central multimídia');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (9, 'Sensor de estacionamento');
+INSERT INTO acessorio (cd_acessorio, ds_acessorio) 
+VALUES (10, 'Câmera de ré');
+
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('MR70123', 1);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('MX11002', 2);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('HJS8723', 3);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('HIJS878', 4);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('PWKD020', 5);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('XSAD998', 6);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('MRR2922', 7);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('KLS2124', 8);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('13123KS', 9);
+INSERT INTO veiculo_acessorio (nr_placa, cd_acessorio) 
+VALUES ('HJW0923', 10);
+
+

@@ -1,0 +1,45 @@
+-- 1 Listar todos os produtos com preço de venda acima de R$ 100,00.
+SELECT * FROM produto WHERE vl_venda > 100;
+
+-- 2 Liste os serviços cujo valor é inferior a R$ 50,00.
+SELECT * FROM servico WHERE vl_servico < 50;
+
+-- 3 Listar os dados dos animais (nome, descrição, data de nascimento e porte), ordenando pelo mais velho;
+SELECT nm_animal, ds_animal, dt_nascimento, tp_porte FROM animal ORDER BY dt_nascimento;
+
+-- 4 Listar o número e o valor total da(s) nota(s) fiscal(is) que foi(ram) emitida(s) no mês de setembro de 2024;
+SELECT nr_notal_fiscal, vl_total FROM nota_fiscal WHERE dt_emissao BETWEEN '2024-09-01' AND '2024-09-30';
+
+-- 5 Listar o nome do(s) cliente(s) que não apresenta(m) e-mail cadastrado;
+SELECT nm_cliente FROM cliente WHERE ds_email IS NULL;
+
+-- 6 Listar qual(is) produto(s) apresentam valor de venda acima de 9.99 e estoque maior ou igual a 100 unidades;
+SELECT * FROM produto WHERE vl_venda > 9.99 AND qt_estoque >= 100;
+
+-- 7 Listar os serviços (nome e valor) ordenando pelo maior valor de serviço;
+SELECT ds_servico, vl_servico FROM servico ORDER BY vl_servico DESC;
+
+-- 8 Listar todos os prestadores de serviço cujo telefone começa com o código de área "47".
+SELECT * FROM prestador_servico WHERE nr_telefone LIKE '47%';
+
+-- 9 Listar os dados (nome e data de nascimento) dos animais são de porte grande.
+SELECT nm_animal, dt_nascimento FROM animal WHERE tp_porte = 'G';
+
+-- 10 Listar os clientes cujo nome apresenta "silva" na sua formação (nm_cliente).
+SELECT * FROM cliente WHERE LOWER (nm_cliente) LIKE '%silva%';
+
+-- 11 Listar todos os agendamentos feitos na primeira quinzena de outubro de 2024.
+SELECT * FROM agendamento WHERE dt_agendamento BETWEEN '2024-10-01' AND '2024-10-15';
+
+-- 12 Listar os clientes que nasceram antes de 01/01/1980.
+SELECT * FROM cliente WHERE dt_nascimento < '1980-01-01';
+
+-- 13 Listar as categorias com descrição contendo a palavra "brinquedo".
+SELECT * FROM categoria WHERE LOWER (ds_categoria) LIKE '%brinquedo%';
+
+-- 14 Listar os clientes cujo e-mail contém "@gmail.com".
+SELECT * FROM cliente WHERE LOWER (ds_email) LIKE ('%@gmail.com'); 
+
+-- 15 Listar os produtos onde o estoque é maior ou igual a 20 e o preço de venda é inferior a R$ 100,00.
+SELECT * FROM produto WHERE qt_estoque >= 20 AND vl_venda < 100;
+

@@ -1,0 +1,119 @@
+INSERT INTO municipio (cd_municipio, nm_municipio, sg_uf) 
+VALUES 
+(10, 'Brusque', 'SC'),
+(20, 'Porto Belo', 'SC'),
+(30, 'Curitiba', 'PR'),
+(40, 'Salvador', 'BA'),
+(50, 'Araçatuba', 'SP');
+
+INSERT INTO endereco (cd_endereco, ds_logradouro, ds_complemento, nm_bairro, nr_cep, cd_municipio)
+VALUES
+(1, 'Rua PR98', 'Casa', 'Ponta Grossa', '9829312', 10),
+(2, 'Rua PR78', 'Apto', 'Salvador', '1047293', 30),
+(3, 'Rua PR48', 'Casa', 'Santo Paulo', '8593012', 40),
+(4, 'Rua PR28', 'Trailer', 'Ponta Aguda', '8374632', 10),
+(5, 'Rua PR18', 'Apartamento', 'Girão', '0958264', 20);
+
+INSERT INTO servico (cd_servico, ds_servico, vl_servico) 
+VALUES
+(15, 'Tosa', 60.00),
+(25, 'Banho', 40.00),
+(35, 'Hotel', 150.00),
+(45, 'Castração', 250.00),
+(55, 'Consulta', 500.00);
+
+INSERT INTO prestador_servico (cd_prestador, nm_prestador, cd_endereco)
+VALUES
+(100, 'Jonas Lobo', 1),
+(200, 'Ana Cachorro', 2),
+(300, 'Carlos Maia', 3),
+(400, 'Fabrício Labrador', 4),
+(500, 'Karlotes XiuXiu', 5);
+
+INSERT INTO servico_prestador (cd_prestador, cd_servico) 
+VALUES
+(100, 15),
+(100, 25),
+(200, 45),
+(300, 35),
+(400, 55);
+
+INSERT INTO agendamento (nr_agendamento, dt_agendamento, hr_agendamento, cd_prestador)
+VALUES
+(10010, '2025-10-29', '13:00:00', 100),
+(18230, '2026-01-09', '14:00:00', 300),
+(13210, '2025-10-28', '14:30:15', 500),
+(10129, '2025-09-25', '17:53:10', 200),
+(18323, '2025-12-25', '12:02:00', 100);
+
+INSERT INTO agendamento_servico (nr_agendamento, cd_servico, qt_servico, vl_servico)
+VALUES
+(10010, 25, 2, 75.00),
+(10129, 15, 3, 170.00),
+(18323, 35, 1, 150.00),
+(13210, 55, 5, 2000.00),
+(10010, 45, 10, 1900.00);
+
+INSERT INTO cliente (cd_cliente, nm_cliente, ds_email, dt_nascimento, cd_endereco)
+VALUES
+(1, 'Adalberto Luiz', 'adalu@gmail.com', '1976-11-24', 1),
+(2, 'Carlos Mezotti', 'camezoti@gmail.com', '1990-10-03', 3),
+(3, 'Andressa Fabiaa', 'adalu@gmail.com', '1983-08-02', 5),
+(4, 'Luis Antônio', 'matadordeleao@gmail.com', '1993-12-03', 4),
+(5, 'Fernando Alura', 'skbikes@gmail.com', '2005-09-02', 2);
+
+INSERT INTO especie (cd_especie, nm_especie)
+VALUES 
+(1, 'Coelho'),
+(6, 'Piriquito'),
+(5, 'Galinha'),
+(3, 'Cão'),
+(2, 'Gato');
+
+INSERT INTO raca (cd_raca, nm_raca, cd_especie)
+VALUES 
+(10, 'Dangola', 5),
+(20, 'Pé pantufa', 5),
+(30, 'Labrador', 3),
+(40, 'Pastor Alemão', 3),
+(50, 'Siamês', 2);
+
+INSERT INTO animal (cd_animal, nm_animal, ds_animal, dt_nascimento, tp_porte, cd_raca, cd_cliente)
+VALUES
+(1, 'Bob', 'Velho e gordo', '2020-03-09', 'G', 50, 1),
+(2, 'Tobia', 'Cachorro fêmea', '2019-02-12', 'M', 40, 3),
+(3, 'Doroti', 'Galinha', '2015-02-09', 'P', 20, 2),
+(4, 'Carl', 'Cão raivoso', '2023-05-10', 'M', 30, 5),
+(5, 'Morow', 'Galo macho', '2025-11-23', 'P', 10, 4);
+
+INSERT INTO categoria (cd_categoria, ds_categoria)
+VALUES 
+(10, 'Banho'),
+(20, 'Ração'),
+(30, 'Brinquedo'),
+(40, 'Casinha'),
+(50, 'Passeio');
+
+INSERT INTO produto (cd_produto, nm_produto, vl_custo, vl_venda, qt_estoque, cd_categoria)
+VALUES
+(11002, 'Shampoo Cão', 20.0, 39.9, 321, 10),
+(11003, 'Milho do Campo', 35.0, 79.9, 21, 20),
+(11004, 'Coleira SEPHORA', 200.0, 500.0, 32, 50),
+(11005, 'Mansão Cat', 350.0, 499.9, 5, 40),
+(11006, 'Morde Morde P', 10.0, 49.9, 17, 30);
+
+INSERT INTO nota_fiscal (nr_nota_fiscal, dt_emissao, vl_total, cd_cliente) 
+VALUES
+(99912, '2012-03-08', 233.0, 1),
+(99915, '2022-10-10', 500.0, 2),
+(99916, '2025-09-07', 499.0, 3),
+(99917, '2016-01-03', 160.0, 4),
+(99919, '2017-02-12', 79.9, 5);
+
+INSERT INTO item_nota_fiscal (nr_nota_fiscal, cd_produto, qt_produto, vl_produto)
+VALUES
+(99912, 11002, 1, 233.0),
+(99915, 11003, 1, 500.0),
+(99916, 11004, 1, 160.0),
+(99917, 11005, 2, 39.75),
+(99919, 11006, 3, 22.0);
