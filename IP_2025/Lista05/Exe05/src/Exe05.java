@@ -4,8 +4,8 @@ public class Exe05 {
     public Exe05() {
         Scanner scanner = new Scanner(System.in);
 
-        String respostasMoca[] =  new String[5];
-        String respostasMoco[] =  new String[5]; 
+        String[] respostasMoca =  new String[5];
+        String[] respostasMoco =  new String[5];
 
         System.out.println("Perguntas para a moça!");
         realizarPerguntas(respostasMoca, scanner);
@@ -24,7 +24,7 @@ public class Exe05 {
         new Exe05();
     }
 
-    public void realizarPerguntas(String vetor[], Scanner leitor) {
+    public void realizarPerguntas(String[] vetor, Scanner leitor) {
 
         System.out.println("Responda com SIM, NÃO ou IND (indiferente)");
         System.out.print("Gosta de música sertaneja? ");
@@ -40,7 +40,7 @@ public class Exe05 {
 
     }
 
-    public void calcularAfinidade(String candidado1[],String candidato2[]) {
+    public void calcularAfinidade(String[] candidado1, String[] candidato2) {
         int afinidade = 0;
         for (int i = 0; i < candidado1.length; i++) {
             if (candidado1[i].equalsIgnoreCase(candidato2[1])) {

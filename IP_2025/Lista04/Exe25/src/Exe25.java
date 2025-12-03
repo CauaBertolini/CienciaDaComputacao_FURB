@@ -9,7 +9,7 @@ public class Exe25 {
 
         boolean vencedor = false;
 
-        while(vencedor == false) {
+        while(!vencedor) {
             System.out.print("Ponto para lado direito ou esquerdo [E ou D]: ");
             String pontuar = scanner.next();
 

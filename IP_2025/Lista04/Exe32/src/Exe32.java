@@ -72,7 +72,7 @@ public class Exe32 {
                         System.out.print(contador + " ");
                     }
                 } else {
-                    System.out.println("");
+                    System.out.println();
                     contadorSemana = 1;
                     if  (contador < 10) {
                         System.out.print(" " + contador + " ");

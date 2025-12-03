@@ -19,9 +19,9 @@ public class Exe00 {
         System.out.println("We know that you have already learned this before!");
         System.out.println("But remeber to enjoy the process.");
 
-        System.out.println("");
+        System.out.println();
         System.out.println("Sistema de médias INICIADO!");
-        System.out.println("");
+        System.out.println();
 
         Scanner scanner = new Scanner(System.in);
 

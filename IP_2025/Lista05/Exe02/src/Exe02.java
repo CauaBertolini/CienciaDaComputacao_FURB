@@ -18,14 +18,14 @@ public class Exe02 {
         new Exe02();
     }
 
-    private void lerValores(double valores[], Scanner scanner) {
+    private void lerValores(double[] valores, Scanner scanner) {
         for (int i = 0; i < valores.length; i++) {
             System.out.print("Valor da posição [ " + i + " ]: ");
             valores[i] =  scanner.nextDouble();
         }
     }
 
-    private double media(double valores[]) {
+    private double media(double[] valores) {
         double soma = 0;
 
         for (int i = 0; i < valores.length; i++) {
@@ -36,7 +36,7 @@ public class Exe02 {
         return media;
     }
 
-    private void escreverMaiorQueMedia(double valores[], double media) {
+    private void escreverMaiorQueMedia(double[] valores, double media) {
         System.out.println("Valores acima da média: ");
         for (int indice = 1; indice < valores.length; indice++) {
             if (valores[indice] > media) {

@@ -12,7 +12,7 @@ public class Exe08 {
             n = scanner.nextInt();
         } while (n > 20 || n < 1);
 
-        double vetor[] = new double[n];
+        double[] vetor = new double[n];
 
         popularVetor(vetor, scanner);
 
@@ -25,7 +25,7 @@ public class Exe08 {
         new Exe08();
     }
 
-    public void popularVetor(double vetor[], Scanner scanner) {
+    public void popularVetor(double[] vetor, Scanner scanner) {
         for (int indice = 0; indice < vetor.length; indice++) {
    
             System.out.print("Informe um valor para [ " + indice + " ] posição: ");
@@ -34,10 +34,10 @@ public class Exe08 {
         }
     }
 
-    public void imprimirTabelaVetor(double vetor[], int n) {
+    public void imprimirTabelaVetor(double[] vetor, int n) {
 
         System.out.println("VALOR  |  FREQUÊNCIA");
-        double valoresContados [] = new double[n]; 
+        double[] valoresContados = new double[n];
 
         for (int indice = 0; indice < vetor.length; indice++) {
 
@@ -58,7 +58,7 @@ public class Exe08 {
         }
     }
 
-    public boolean verificarSeFoiContado(double vetor[], double valor) {
+    public boolean verificarSeFoiContado(double[] vetor, double valor) {
         for (int i = 0; i < vetor.length; i++) {
             if (valor == vetor[i]) {
                 return true;

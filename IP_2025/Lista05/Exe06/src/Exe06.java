@@ -8,7 +8,7 @@ public class Exe06 {
         System.out.print("Informe um valor inteiro:  ");
         int n = scanner.nextInt();
 
-        double vetor[] = new double[n];
+        double[] vetor = new double[n];
 
         popularVetor(vetor, scanner);
         
@@ -27,14 +27,14 @@ public class Exe06 {
         new Exe06();
     }
 
-    public void popularVetor(double vetor[], Scanner scanner) {
+    public void popularVetor(double[] vetor, Scanner scanner) {
         for (int i = 0; i < vetor.length; i++) {
             System.out.print("Valor real: ");
             vetor[i] = scanner.nextDouble();
         }
     }
 
-    public void verificarVetor(double vetor[], double valor) {
+    public void verificarVetor(double[] vetor, double valor) {
         boolean existente = false;
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] == valor) {

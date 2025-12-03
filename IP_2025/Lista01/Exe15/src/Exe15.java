@@ -31,7 +31,7 @@ public class Exe15 {
         valorInteiro = valorInteiro % 5;
         int notas2 = valorInteiro / 2;
         valorInteiro = valorInteiro % 5;
-        int moeda1 = valorInteiro / 1;
+        int moeda1 = valorInteiro;
         
         int moeda50 = valorCentavo / 50;
         valorCentavo %= 50;
@@ -41,7 +41,7 @@ public class Exe15 {
         valorCentavo %= 10;
         int moeda5 = valorCentavo / 5;
         valorCentavo %= 5;
-        int moeda01 = valorCentavo / 1;
+        int moeda01 = valorCentavo;
 
         System.out.println("Liberando dinheiro: ...");
         System.out.println(notas100 + " Notas de R$100");

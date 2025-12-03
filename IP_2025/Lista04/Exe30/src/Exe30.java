@@ -30,11 +30,11 @@ public class Exe30 {
             System.out.println(valorInicial);
 
             if (espacoMochila > 0) {
-                mochila += String.valueOf(valorInicial) + " ";
+                mochila += valorInicial + " ";
                 somaMochila += valorInicial;
                 espacoMochila--;
             } else {
-                fora += String.valueOf(valorInicial) + " ";
+                fora += valorInicial + " ";
                 somaFora += valorInicial;
             }
 

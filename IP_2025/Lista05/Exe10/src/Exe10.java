@@ -4,7 +4,7 @@ public class Exe10 {
 
     public Exe10 () {
         Scanner scanner = new Scanner(System.in);
-        String escolhasDoMenu[] = {"Incluir valor", "Pesquisar valor", "Alterar valor", "Excluir valor", "Mostrar valores", "Ordenar valores", "Inverter valores", "Sair do sitema"};
+        String[] escolhasDoMenu = {"Incluir valor", "Pesquisar valor", "Alterar valor", "Excluir valor", "Mostrar valores", "Ordenar valores", "Inverter valores", "Sair do sitema"};
       
 
         int[] valores = new int[50];

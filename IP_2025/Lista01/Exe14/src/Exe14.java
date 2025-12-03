@@ -41,8 +41,8 @@ public class Exe14 {
         valorTotal = valorTotal % 10;
         int notas5 = valorTotal / 5;
         valorTotal = valorTotal % 5;
-        int notas1 = valorTotal / 1;
-        valorTotal = valorTotal % 1;
+        int notas1 = valorTotal;
+        valorTotal = 0;
 
         System.out.println("Liberando notas: ");
         System.out.println(notas100 + " Notas R$100");

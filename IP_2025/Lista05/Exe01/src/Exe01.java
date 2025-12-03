@@ -6,7 +6,7 @@ public class Exe01 {
     public Exe01() {
         Scanner scanner = new Scanner(System.in);
 
-        int numeros[ ] = new int[10];
+        int[] numeros = new int[10];
 
         lerVetor(numeros, scanner);
 
@@ -20,7 +20,7 @@ public class Exe01 {
         new Exe01();
     }
 
-    private void lerVetor(int vetor[], Scanner leitor) {
+    private void lerVetor(int[] vetor, Scanner leitor) {
         for (int i = 0; i < vetor.length; i++) {
             
             System.out.print("Digite um número para posição [ " + i + " ]: ");
@@ -29,7 +29,7 @@ public class Exe01 {
         }
     }
 
-    private void escreverVetor(int vetor[], boolean inverter) {
+    private void escreverVetor(int[] vetor, boolean inverter) {
 
         if (inverter) {
             for (int indice = vetor.length - 1; indice >= 0; indice--) {

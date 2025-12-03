@@ -12,16 +12,16 @@ public class Exe09 {
         
         int n = 30;
 
-        String sexosList [] = new String[n];
-        int idadesList [] = new int[n];
-        double notasList [] = new double[n];
+        String[] sexosList = new String[n];
+        int[] idadesList = new int[n];
+        double[] notasList = new double[n];
 
         double media;
         double mediaMasculina;
 
         popularVetores(sexosList, idadesList, notasList, scanner);
 
-        System.out.println("");
+        System.out.println();
         System.out.println("___________RESULTADOS DA AVALIAÇÃO___________");
 
         media = calcularNotaMedia(notasList);
@@ -42,7 +42,7 @@ public class Exe09 {
         
     }
 
-    public void popularVetores (String sexo[], int idades[], double notas[], Scanner scanner) {
+    public void popularVetores (String[] sexo, int[] idades, double[] notas, Scanner scanner) {
 
         System.out.println("__________Avaliação do Cinema__________");
 
@@ -51,7 +51,7 @@ public class Exe09 {
             boolean sexoValido = false;
             boolean notaValida = false;
 
-            System.out.println("");
+            System.out.println();
             System.out.println("_____________Pessoa [" + (i+1) + "]_________________");
 
             do {
@@ -104,7 +104,7 @@ public class Exe09 {
 
     }
 
-    public double calcularNotaMedia (double notas[]) {
+    public double calcularNotaMedia (double[] notas) {
         double somaNotas = 0;
         int contador = 0;
         for (double nota : notas) {
@@ -115,7 +115,7 @@ public class Exe09 {
         return somaNotas / contador;
     }
 
-    public double calcularNotaMediaDosHomens (double notas[], String sexos[]) {
+    public double calcularNotaMediaDosHomens (double[] notas, String[] sexos) {
         double somaNotas = 0;
         int contador = 0;
 
@@ -128,7 +128,7 @@ public class Exe09 {
         return somaNotas / contador;
     }
 
-    public void mostrarNotaDadaPorMulherMaisNova (double notas[], String sexos[], int idades[]) {
+    public void mostrarNotaDadaPorMulherMaisNova (double[] notas, String[] sexos, int[] idades) {
         int contador = 0;
         double nota = 0;
         int idadeMulherMaisNova = 0;
@@ -154,7 +154,7 @@ public class Exe09 {
         System.out.println("Nota dada pela mulher mais nova com "+ idadeMulherMaisNova +" anos: " + nota);
     }
 
-    public void mostrarQuantidadeMulheresNotaMaiorQueMedia (double notas[], String sexos[], double media) {
+    public void mostrarQuantidadeMulheresNotaMaiorQueMedia (double[] notas, String[] sexos, double media) {
         int contador = 0;
         for (int i = 0; i < sexos.length; i++) {
 

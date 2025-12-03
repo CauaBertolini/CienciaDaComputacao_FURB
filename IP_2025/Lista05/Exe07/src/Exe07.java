@@ -12,7 +12,7 @@ public class Exe07 {
             n = scanner.nextInt();
         } while (n > 20 || n < 1);
 
-        int vetor[] = new int[n];
+        int[] vetor = new int[n];
 
         lerVetor(vetor, scanner);
         ordenarVetor(vetor, scanner);
@@ -25,7 +25,7 @@ public class Exe07 {
         new Exe07();
     }
 
-    public void lerVetor(int vetor[], Scanner scanner) {
+    public void lerVetor(int[] vetor, Scanner scanner) {
         for (int indice = 0; indice < vetor.length; indice++) {
 
             int numero = 0;
@@ -49,7 +49,7 @@ public class Exe07 {
         }
     }
 
-    public void ordenarVetor(int vetor[], Scanner scanner) {
+    public void ordenarVetor(int[] vetor, Scanner scanner) {
         int i = 0;
 
         while (i < vetor.length-1) {
@@ -65,7 +65,7 @@ public class Exe07 {
 
     }
 
-    private void escreverValores(int valores[]) {
+    private void escreverValores(int[] valores) {
         for (int i = 0; i < valores.length; i++) {
             System.out.println(valores[i]);
         }

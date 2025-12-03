@@ -11,7 +11,7 @@ public class Exe10e2 {
                 String jString = "";
 
                 if (j < 10)  {
-                    jString = "0" + String.valueOf(j);
+                    jString = "0" + j;
                 } else {
                     jString = String.valueOf(j);
                 }
