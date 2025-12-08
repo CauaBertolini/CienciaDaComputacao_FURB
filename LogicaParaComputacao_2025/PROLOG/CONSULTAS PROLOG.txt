@@ -1,0 +1,29 @@
+1
+professor_de(P, carla).
+
+2
+disciplina_comum(joao, pedro, D).
+
+3
+horarios_comuns(maria, pedro).
+
+4
+dupla_estudo(A1, A2, P, redes, H).
+false.
+dupla_estudo(A1, A2, P, logica, H).
+
+5
+trio_estudo(A1, A2, A3, P, logica, H).
+
+6
+disciplina_comum(lucas, ana, D).
+
+7
+disponivel(A, segunda_tarde).
+
+8
+estuda(A, inteligencia_artificial).
+
+9
+trio_estudo(carla, A1, A2, P, D, H).
+

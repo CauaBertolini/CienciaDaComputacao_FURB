@@ -1,0 +1,74 @@
+% Disciplinas
+disciplina(logica).
+disciplina(inteliencia_artificial).
+disciplina(redes).
+disciplina(banco_de_dados).
+disciplina(programacao).
+
+% Professores
+professor(alice).
+professor(bob).
+professor(clara).
+
+% Alunos
+aluno(joao).
+aluno(maria).
+aluno(carla).
+aluno(pedro).
+aluno(ana).
+aluno(lucas).
+
+% Professores para disciplina
+leciona(alice, logica).
+leciona(alice, inteligencia_artificial).
+leciona(bob, redes).
+leciona(clara, programacao).
+leciona(clara, banco_de_dados).
+
+
+% Alunos para disciplinas
+estuda(joao, logica).
+estuda(joao, redes).
+estuda(maria, inteligencia_artificial).
+estuda(maria, banco_de_dados).
+estuda(carla, logica).
+estuda(carla, inteligencia_artificial).
+estuda(pedro, redes).
+estuda(pedro, banco_de_dados).
+estuda(ana, inteligencia_artificial).
+estuda(ana, programacao).
+estuda(lucas, logica).
+estuda(lucas, programacao).
+
+
+% Disponibilidade de cada aluno
+disponivel(joao, segunda_tarde).
+disponivel(maria, quarta_manha).
+disponivel(carla, segunda_tarde).
+disponivel(pedro, quarta_manha).
+disponivel(ana, segunda_tarde).
+disponivel(lucas, segunda_tarde).
+
+% REGRAS
+
+% Regra 1: indicar quem são os professores de um aluno.
+% P leciona disciplina D que A estuda?
+professor_de(P,A):- professor(P), aluno(A), leciona(P,D),estuda(A,D).
+
+% Regra 2: verificar se dois alunos têm disciplinas em comum.
+% A1 estuda a mesma disciplina D que A2
+disciplina_comum(A1,A2,D):- aluno(A1), aluno(A2), estuda(A1,D), estuda(A2,D), A1\=A2.
+
+% Regra 3: verificar de dois alunos têm horários compatíveis.
+% A1 está disponível em horário H em que A2 também está?
+horarios_comuns(A1,A2):- disponivel(A1,H), disponivel(A2,H), A1\=A2.
+
+% Regra 4: sugerir grupo de estudo de 2 alunos com disciplinas e horários compatíveis.
+% Indicar membros do grupo (alunos e professor tutor), disciplina e
+% horário.
+dupla_estudo(A1, A2, P, D, H):- aluno(A1), aluno(A2), professor(P), disciplina(D), disponivel(A1, H), disponivel(A2, H), leciona(P, D), estuda(A1, D), estuda(A2, D), A1\=A2.
+
+% Regra 5: sugerir grupo de estudo de 3 alunos com disciplinas e horários compatíveis.
+% Indicar membros do grupo (alunos e professor tutor), disciplina e
+% horário.
+trio_estudo(A1, A2, A3, P, D, H):- aluno(A1), aluno(A2), aluno(A3), professor(P), disciplina(D), estuda(A1,D), estuda(A2,D), estuda(A3,D), A1\= A2, A2\= A3, A1 \= A3, A2 @< A3, leciona(P,D), disponivel(A1,H), disponivel(A2,H), disponivel(A3,H).
