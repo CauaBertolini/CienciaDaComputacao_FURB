@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/AlgoritmosEEstruturaDeDados_2026.iml" filepath="$PROJECT_DIR$/.idea/AlgoritmosEEstruturaDeDados_2026.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lista01-ListasEstaticas/Lista01-ListasEstaticas.iml" filepath="$PROJECT_DIR$/Lista01-ListasEstaticas/Lista01-ListasEstaticas.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lista02-TiposGenericos/Lista02-TiposGenericos.iml" filepath="$PROJECT_DIR$/Lista02-TiposGenericos/Lista02-TiposGenericos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista03-ListasEncadeadas/Lista03-ListasEncadeadas.iml" filepath="$PROJECT_DIR$/Lista03-ListasEncadeadas/Lista03-ListasEncadeadas.iml" />
     </modules>
   </component>
 </project>

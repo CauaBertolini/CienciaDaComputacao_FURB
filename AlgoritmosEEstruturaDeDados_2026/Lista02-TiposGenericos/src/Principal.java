@@ -20,7 +20,7 @@ public class Principal {
         lista.inserir(50);
         lista.inserir(50);
 
-
+        lista.inverter();
         int tamanho = lista.getTamanho();
         System.out.println(tamanho);
         lista.exibir();

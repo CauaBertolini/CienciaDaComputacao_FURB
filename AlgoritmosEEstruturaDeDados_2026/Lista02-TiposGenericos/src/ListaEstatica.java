@@ -1,7 +1,6 @@
 public class ListaEstatica <T> {
     private Object[] info;
     private int tamanho;
-    private T primeiro;
 
     public ListaEstatica() {
         info = new Object[10];
@@ -36,7 +35,7 @@ public class ListaEstatica <T> {
 
     public int buscar(T valor) {
         for(int i = 0; i < tamanho; i++) {
-            if (info[i] == valor) {
+            if (info[i].equals(valor)) {
                 return i;
             }
         }
@@ -61,22 +60,24 @@ public class ListaEstatica <T> {
         tamanho = 0;
     }
 
+    @SuppressWarnings("unchecked")
     public T obterElemento(int posicao) throws IndexOutOfBoundsException {
         try {
-            return (T) info[posicao];
+            return (T)info[posicao];
         } catch (IndexOutOfBoundsException e) {
             throw  new IndexOutOfBoundsException();
         }
     }
 
+    @SuppressWarnings("unchecked")
     public void inverter() {
-        for (int i = 0; i < tamanho; i++) {
-            for (int l = tamanho; i >= 0; i--) {
-                Object valorAntigo = info[i];
-                info[i] = info[l];
-                info[l] = valorAntigo;
-            }
+        ListaEstatica<T> listaAuxiliar = new ListaEstatica<>();
+
+        for (int i = tamanho-1; i >= 0; i--) {
+            listaAuxiliar.inserir((T)info[i]);
         }
+
+        info = listaAuxiliar.info;
     }
 
     public boolean estaVazia() {
@@ -96,7 +97,7 @@ public class ListaEstatica <T> {
         StringBuilder stringBuilder = new StringBuilder();
 
         for(int i = 0; i < tamanho; i++) {
-            stringBuilder.append(info[i]);
+            stringBuilder.append(info[i].toString());
             if (i == tamanho-1) {
                 stringBuilder.append(".");
             } else {

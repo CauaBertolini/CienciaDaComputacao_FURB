@@ -48,4 +48,18 @@ class ListaEstaticaTest {
 
         assertEquals("20, 15, 10, 5.", lista.toString());
     }
+
+    @Test
+    void caso5_inverter_lista() {
+        ListaEstatica lista = new ListaEstatica<>();
+
+        lista.inserir(20);
+        lista.inserir(15);
+        lista.inserir(10);
+        lista.inserir(5);
+
+        lista.inverter();
+
+        assertEquals("5, 10, 15, 20.", lista.toString());
+    }
 }
