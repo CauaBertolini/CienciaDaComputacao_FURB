@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6daceb7c-65c1-4c13-85a5-8672d2522576" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/Exe15POO - Arquivos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/src/controller/DataStreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/src/controller/FileDirectoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/src/controller/ObjectStreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exe015POO - Arquivos/src/model/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exe016POO - DirectoryAnalyser.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/DocumentsExplorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/ProgramController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "CauaBertolini"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CauaBertolini/CienciaDaComputacao_FURB.git",
+    "accountId": "cc9c99ae-a0dd-4ae6-933e-2964ca191243"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="36IQ8S4sN7JYeI3l9sv0QYbEi66" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/cbertolini/Documents/GitHub/CienciaDaComputacao_FURB/POO_2025/Exe016POO/src/Main.java",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6daceb7c-65c1-4c13-85a5-8672d2522576" name="Changes" comment="" />
+      <created>1764691449332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764691449332</updated>
+      <workItem from="1764691450837" duration="7332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
