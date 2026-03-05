@@ -1,11 +1,11 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-class ListaEstaticaTest {
+public class ListaEstaticaTest {
 
     @Test
-    void caso1_insercao_de_dados_toString() {
+    public void caso1_insercao_de_dados_toString() {
         ListaEstatica lista = new ListaEstatica<>();
         lista.inserir(1);
         lista.inserir(2);
@@ -17,7 +17,7 @@ class ListaEstaticaTest {
     }
 
     @Test
-    void caso2_redimencionamento_de_vetor() {
+    public void caso2_redimencionamento_de_vetor() {
         ListaEstatica lista = new ListaEstatica<>();
         for(int i = 0; i <= 11; i++) {
             lista.inserir(i);
@@ -26,7 +26,7 @@ class ListaEstaticaTest {
     }
 
     @Test
-    void caso3_insercao_de_dado_e_retorno_dele() {
+    public void caso3_insercao_de_dado_e_retorno_dele() {
         ListaEstatica lista = new ListaEstatica<>();
 
         lista.inserir("TesteDeEntrada");
@@ -35,7 +35,7 @@ class ListaEstaticaTest {
     }
 
     @Test
-    void caso4_inverter_lista() {
+    public void caso4_inverter_lista() {
         ListaEstatica lista = new ListaEstatica<>();
 
         lista.inserir(5);
@@ -50,7 +50,7 @@ class ListaEstaticaTest {
     }
 
     @Test
-    void caso5_inverter_lista() {
+    public void caso5_inverter_lista() {
         ListaEstatica lista = new ListaEstatica<>();
 
         lista.inserir(20);
