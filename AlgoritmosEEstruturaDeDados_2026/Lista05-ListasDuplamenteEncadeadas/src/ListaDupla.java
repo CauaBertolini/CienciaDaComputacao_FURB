@@ -3,7 +3,6 @@ public class ListaDupla<T> {
     private NoListaDupla primeiro;
 
     public ListaDupla() {
-        primeiro = new NoListaDupla<>();
         primeiro = null;
     }
 
@@ -18,7 +17,7 @@ public class ListaDupla<T> {
         novoNo.setProximo(primeiro);
         novoNo.setAnterior(null);
 
-        if (estaVazia()) {
+        if (primeiro != null) {
             primeiro.setAnterior(novoNo);
         }
         this.primeiro = novoNo;
@@ -52,7 +51,7 @@ public class ListaDupla<T> {
 
     public void exibir() {
         NoListaDupla<T> primeiro = getPrimeiro();
-        while (primeiro.getProximo() != null) {
+        while (primeiro != null) {
             System.out.println(primeiro.getInfo());
             primeiro = primeiro.getProximo();
         }
@@ -60,7 +59,7 @@ public class ListaDupla<T> {
 
     public void exibirOrdemInversa() {
         NoListaDupla ultimo = obterNo(obterComprimento());
-        while (ultimo.getAnterior() != null) {
+        while (ultimo != null) {
             System.out.println(ultimo.getInfo());
             ultimo = ultimo.getAnterior();
         }
@@ -72,10 +71,11 @@ public class ListaDupla<T> {
 
     public NoListaDupla<T> buscar(T valor) {
         NoListaDupla<T> no = getPrimeiro();
-        while (no.getProximo() != null) {
+        while (no != null) {
             if (no.getInfo().equals(valor)) {
                 return no;
             }
+            no = no.getProximo();
         }
         return null;
     }
@@ -92,7 +92,7 @@ public class ListaDupla<T> {
         if (idx >= 0) {
             int cont = 0;
 
-            while (no.getProximo() != null) {
+            while (no != null) {
                 if (cont == idx) {
                     return no;
                 }
@@ -116,7 +116,7 @@ public class ListaDupla<T> {
     public int obterComprimento() {
         int cont = -1;
         NoListaDupla<T> no = getPrimeiro();
-        while (no.getProximo() != null) {
+        while (no != null) {
             cont++;
             no = no.getProximo();
         }
