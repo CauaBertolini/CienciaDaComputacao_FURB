@@ -32,10 +32,11 @@ public class ListaDupla<T> {
             } else { // Não é o primeiro então o próximo do anterior recebe o próximo do atual
                 noRemocao.getAnterior().setProximo(noRemocao.getProximo()); //
             }
+            if (noRemocao.getProximo() != null) { // Se não for o último...
+                noRemocao.getProximo().setAnterior(noRemocao.getAnterior()); // Então o anterior do próximo recebe o anterior dele
+            }
         }
-        if (noRemocao.getProximo() != null) { // Se não for o último...
-            noRemocao.getProximo().setAnterior(noRemocao.getAnterior()); // Então o anterior do próximo recebe o anterior dele
-        }
+
     }
 
     public void liberar() {
