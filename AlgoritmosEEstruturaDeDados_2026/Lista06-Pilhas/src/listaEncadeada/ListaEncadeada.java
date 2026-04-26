@@ -5,21 +5,26 @@ public class ListaEncadeada<T> {
     private NoLista primeiro;
 
     public ListaEncadeada() {
-        primeiro = new NoLista<>();
-        primeiro.setProximo(null);
+        primeiro = new NoLista<T>();
+        primeiro = null;
 
-    }
-
-    public NoLista getPrimeiro() {
-        return primeiro;
     }
 
     public void inserir(T valor) {
         NoLista<T> novoNoLista = new NoLista<>();
         novoNoLista.setInfo(valor);
-
         novoNoLista.setProximo(primeiro);
         this.primeiro = novoNoLista;
+    }
+
+    public void liberar() {
+        NoLista noAtual = primeiro;
+        while (noAtual.getProximo() != null) {
+            NoLista proximo = noAtual.getProximo();
+            noAtual.setProximo(null);
+            noAtual = proximo;
+        }
+        primeiro = null;
     }
 
     public void retirar(T valor) {
@@ -105,11 +110,16 @@ public class ListaEncadeada<T> {
         return null;
     }
 
+    public NoLista<T> getPrimeiro() {
+        return primeiro;
+    }
+
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         NoLista<T> no = primeiro;
-        while (no.getProximo() != null) {
+        while (no != null) {
             sb.append(no.getInfo());
             sb.append(", ");
             no = no.getProximo();

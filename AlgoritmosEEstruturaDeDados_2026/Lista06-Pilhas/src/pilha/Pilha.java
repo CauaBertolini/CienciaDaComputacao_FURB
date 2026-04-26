@@ -1,9 +1,9 @@
 package pilha;
 
-public interface Pilha {
-    public void push(Object info);
-    public Object pop();
-    public Object peek();
+public interface Pilha<T> {
+    public void push(T info);
+    public T pop();
+    public T peek();
     public boolean estaVazia();
     public void liberar();
 }

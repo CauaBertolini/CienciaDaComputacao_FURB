@@ -1,18 +1,18 @@
 package pilha;
 
-public class PilhaVetor implements Pilha {
-    private Object lista[];
+public class PilhaVetor<T> implements Pilha<T> {
+    private T lista[];
     private int limite;
     private int tamanho;
 
     public PilhaVetor(int limite) {
-        lista = new Object[limite];
+        lista = (T[]) new Object[limite];
         this.limite = limite;
         this.tamanho = 0;
     }
 
     @Override
-    public void push(Object info) throws PilhaCheiaException {
+    public void push(T info) throws PilhaCheiaException {
         if (tamanho < limite) {
             lista[tamanho] = info;
             tamanho++;
@@ -22,10 +22,10 @@ public class PilhaVetor implements Pilha {
     }
 
     @Override
-    public Object pop() throws PilhaVaziaException {
+    public T pop() throws PilhaVaziaException {
 
         if (!estaVazia()) {
-            Object info = peek(); // Topo
+            T info = peek(); // Topo
             lista[tamanho-1] = null; // Limpar Referência
             tamanho--;
             return info;
@@ -35,11 +35,11 @@ public class PilhaVetor implements Pilha {
     }
 
     @Override
-    public Object peek() throws PilhaVaziaException {
+    public T peek() throws PilhaVaziaException {
         if (estaVazia()) {
             throw new PilhaVaziaException();
         }
-        return lista[tamanho];
+        return lista[tamanho-1];
     }
 
     @Override
@@ -59,15 +59,35 @@ public class PilhaVetor implements Pilha {
         int espacoDisponivel = limite - tamanho;
         int elementosP = p.tamanho;
         if (elementosP <= espacoDisponivel) {
-            PilhaVetor listaAuxiliar = new PilhaVetor(p.limite);
+            PilhaVetor<T> listaAuxiliar = new PilhaVetor(p.limite);
 
             while(!p.estaVazia()) {
-                listaAuxiliar.push(p.pop());
+                listaAuxiliar.push((T) p.pop());
             }
             while (!listaAuxiliar.estaVazia()) {
                 this.push(listaAuxiliar.pop());
                 p.push(listaAuxiliar.pop());
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        PilhaVetor<T> pilhaAuxiliar = new PilhaVetor<>(limite);
+        while (!estaVazia()) {
+            T info = pop();
+            pilhaAuxiliar.push(info);
+            sb.append(info.toString());
+            if (tamanho == 0) {
+                sb.append(".");
+            } else {
+                sb.append(", ");
+            }
+        }
+        while (!pilhaAuxiliar.estaVazia()) {
+            push(pilhaAuxiliar.pop());
+        }
+        return sb.toString();
     }
 }
