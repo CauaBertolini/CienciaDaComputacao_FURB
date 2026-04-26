@@ -1,7 +1,7 @@
 package pilha;
 
+import exception.PilhaVaziaException;
 import listaEncadeada.ListaEncadeada;
-import listaEncadeada.NoLista;
 
 public class PilhaListaEncadeada<T> implements Pilha<T> {
     private ListaEncadeada<T> lista;
@@ -16,15 +16,25 @@ public class PilhaListaEncadeada<T> implements Pilha<T> {
     }
 
     @Override
-    public T pop() {
-        T topo =  lista.getPrimeiro().getInfo();
-        lista.retirar(lista.getPrimeiro().getInfo());
-        return topo;
+    public T pop() throws PilhaVaziaException {
+        try {
+            T topo =  lista.getPrimeiro().getInfo();
+            lista.retirar(lista.getPrimeiro().getInfo());
+            return topo;
+        }
+        catch (Exception e) {
+            throw new PilhaVaziaException();
+        }
     }
 
     @Override
-    public T peek() {
-        return lista.getPrimeiro().getInfo();
+    public T peek() throws PilhaVaziaException {
+        try {
+            return lista.getPrimeiro().getInfo();
+        }
+        catch (Exception e) {
+            throw new PilhaVaziaException();
+        }
     }
 
     @Override

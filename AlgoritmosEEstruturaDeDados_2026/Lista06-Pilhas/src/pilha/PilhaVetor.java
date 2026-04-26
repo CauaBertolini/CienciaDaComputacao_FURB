@@ -1,5 +1,8 @@
 package pilha;
 
+import exception.PilhaCheiaException;
+import exception.PilhaVaziaException;
+
 public class PilhaVetor<T> implements Pilha<T> {
     private T lista[];
     private int limite;

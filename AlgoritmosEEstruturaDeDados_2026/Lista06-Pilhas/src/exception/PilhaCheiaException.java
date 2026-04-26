@@ -1,4 +1,4 @@
-package pilha;
+package exception;
 
 public class PilhaCheiaException extends RuntimeException {
     public PilhaCheiaException() {

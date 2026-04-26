@@ -1,4 +1,3 @@
-import Expressao.EExpressaoElement;
 import pilha.PilhaListaEncadeada;
 
 import java.util.HashMap;
