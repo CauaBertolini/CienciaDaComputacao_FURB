@@ -33,30 +33,31 @@ public class ArvoreBinaria<T> implements IArvoreBinaria<T> {
     }
 
     private boolean pertence(NoArvoreBinaria<T> no, T info) {
-
+        System.out.print("< ");
         if (no == null) {
-            System.out.println("<>");
+            System.out.print(" >");
             return false;
         }
 
-        else {
-            System.out.println("< " + no.getInfo() + " >");
+        System.out.print(no.getInfo());
 
-            System.out.println(" ESQUERDA < " + no.getEsquerda().getInfo() + " >");
-
-            if (no.getInfo().equals(info)) {
-                return true;
-            }
-
-            System.out.println(" DIREITA < " + no.getDireita().getInfo() + " >");
-
-            if (pertence(no.getEsquerda(), info)) {
-                return true;
-            }
-            if (pertence(no.getDireita(), info)) {
-                return true;
-            }
+        if (no.getInfo().equals(info)) {
+            System.out.print(" >");
+            return true;
         }
+
+        if (pertence(no.getEsquerda(), info)) {
+            System.out.print(" >");
+            return true;
+        }
+
+        if (pertence(no.getDireita(), info)) {
+            System.out.print(" >");
+            return true;
+        }
+
+        System.out.print(" >");
+
         return false;
     }
 
