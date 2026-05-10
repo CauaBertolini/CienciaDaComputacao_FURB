@@ -26,14 +26,13 @@ public class ArvoreNAria<T> {
         if (no == null) {
             return string.toString();
         }
-
         string.append("<"+no.getInfo());
-
-        string.append(obterRepresentacaoTextual(no.getPrimeiro()));
-
-        string.append(obterRepresentacaoTextual(no.getProximo()));
+        no = no.getPrimeiro();
+        while (no != null) {
+            string.append(obterRepresentacaoTextual(no));
+            no = no.getProximo();
+        }
         string.append(">");
-
         return string.toString();
     }
 
@@ -43,22 +42,23 @@ public class ArvoreNAria<T> {
 
     private Boolean pertence(NoArvore<T> no, T info) {
         if (no == null) {
-            return false;
+            return (Boolean) false;
+        }
+        System.out.println(no.getInfo());
+        if (no.getInfo().equals(info)) {
+            return (Boolean) true;
+        } else {
+            NoArvore<T> aux = (NoArvore<T>) no.getPrimeiro();
+            while(aux != null) {
+
+                if (pertence(aux, info)) {
+                    return (Boolean) true;
+                }
+                aux = aux.getProximo();
+            }
         }
 
-        if (no.getInfo() == info) {
-            return true;
-        }
-
-        if (pertence(no.getPrimeiro(), info)) {
-            return true;
-        }
-
-        if (pertence(no.getProximo(), info)) {
-            return true;
-        }
-
-        return false;
+        return (Boolean) false;
     }
 
     public int contarNos() {
@@ -71,11 +71,13 @@ public class ArvoreNAria<T> {
         if (no == null) {
             return cont;
         }
-
         cont++;
 
-        cont += contarNos(no.getPrimeiro());
-        cont += contarNos(no.getProximo());
+        no = no.getPrimeiro();
+        while (no != null) {
+            cont += contarNos(no);
+            no = no.getProximo();
+        }
 
         return cont;
     }

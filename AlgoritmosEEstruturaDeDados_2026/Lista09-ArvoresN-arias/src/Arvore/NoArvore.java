@@ -12,7 +12,7 @@ public class NoArvore<T> {
     }
 
     public void inserirFilho(NoArvore<T> filho) {
-        filho.setProximo(this.getProximo());
+        filho.setProximo(this.getPrimeiro());
         this.setPrimeiro(filho);
     }
 

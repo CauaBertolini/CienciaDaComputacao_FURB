@@ -64,7 +64,7 @@ public class ArvoreNAriaTest <T> {
         no1.inserirFilho(no3);
         no1.inserirFilho(no2);
 
-        ArvoreNAria arvore = new ArvoreNAria<>();
+        ArvoreNAria<Integer> arvore = new ArvoreNAria<Integer>();
         arvore.setRaiz(no1);
 
         assertEquals(true, arvore.pertence(7));
