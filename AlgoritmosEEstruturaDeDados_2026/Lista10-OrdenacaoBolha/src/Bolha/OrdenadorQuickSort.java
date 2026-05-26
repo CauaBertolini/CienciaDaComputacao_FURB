@@ -1,9 +1,9 @@
 package Bolha;
 
-public class OrdenacaoQuickSort<T extends Comparable<T>> extends OrdenacaoAbstract<T> {
+public class OrdenadorQuickSort<T extends Comparable<T>> extends OrdenadorAbstract<T> {
 
     private void quickSort(int inicio, int fim) {
-        if (getInfo()[inicio].compareTo(getInfo()[fim]) < 0) {
+        if (inicio < fim) {
             int idxPivo = particionar(inicio, fim);
             quickSort(inicio, idxPivo-1);
             quickSort(idxPivo+1, fim);
@@ -42,7 +42,7 @@ public class OrdenacaoQuickSort<T extends Comparable<T>> extends OrdenacaoAbstra
 
     @Override
     public void ordenar() {
-        int fim = getInfo().length;
+        int fim = (getInfo().length-1);
         quickSort(0, fim);
     }
 }
