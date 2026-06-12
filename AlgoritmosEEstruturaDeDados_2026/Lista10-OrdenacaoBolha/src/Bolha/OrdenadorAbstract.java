@@ -1,6 +1,6 @@
 package Bolha;
 
-public abstract class OrdenacaoAbstract <T extends Comparable<T>> {
+public abstract class OrdenadorAbstract<T extends Comparable<T>> {
     protected T info[];
 
     public T[] getInfo() {
